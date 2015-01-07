@@ -1,0 +1,79 @@
+/* BRAND */
+
+.navbar-brand {
+    font: 1.5em $logo-font;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+a.navbar-brand:hover {
+	color: #fff;
+}
+
+/* MENU ICON */
+
+.menu-icon {
+	position: relative;
+	display:  inline-block;
+	width: 20px;
+	height: 16px;
+	bottom: 2px;
+	float: right;
+	margin: 1em 1.5em 0 0;
+}
+.menu-icon:hover {
+	cursor: pointer
+}
+.menu-icon span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu-icon span:before, .menu-icon span:after {
+	position: absolute;
+	content: '';
+}
+.menu-icon span, .menu-icon span:before, .menu-icon span:after {
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+	display: block;
+}
+.menu-icon span:before {
+	margin-top: -8px;
+}
+.menu-icon span:after {
+	margin-top: 8px;
+}
+
+/*--- menu icon transition ---*/
+
+.menu-icon span {
+	transition-duration: 0s;
+	transition-delay: .2s;
+}
+.menu-icon.open span {
+	background-color: rgba(0,0,0,0.0);
+	transition-delay: .2s;
+}
+.menu-icon span:before {
+	transition-property: margin, -webkit-transform;
+	transition-duration: .2s;
+	transition-delay: .2s, 0;
+}
+.menu-icon.open span:before {
+	margin-top: 0;
+	transform: rotate(45deg);
+	transition-delay: 0, .2s;
+}
+.menu-icon span:after {
+	transition-property: margin, -webkit-transform;
+	transition-duration: .2s;
+	transition-delay: .2s, 0;
+}
+.menu-icon.open span:after {
+	margin-top: 0;
+	transform: rotate(-45deg);
+	transition-delay: 0, .2s;
+}

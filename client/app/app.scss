@@ -27,6 +27,10 @@ p {
 	line-height: 1.4;
 }
 
+:focus {
+	outline: none;
+}
+
 .navbar {
 	margin-bottom: 0;
 }

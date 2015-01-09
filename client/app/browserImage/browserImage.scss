@@ -1,0 +1,35 @@
+.browser-window {
+    text-align: left;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #E2E2E1;
+    .top-bar {
+        height: 30px;
+        border-radius: 5px 5px 0 0;
+        border-top: thin solid #E2E2E1;
+        border-bottom: thin solid #E2E2E1;
+        background: #E2E2E1;
+    }
+    .circle {
+        height: 8px;
+        width: 8px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #FFF;
+    }
+    .circles { margin: 3px 11px; }
+    .content {
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        display: inline-block;
+        border-radius: 0 0 5px 5px;
+        background-color: #fafafa;
+        img {
+            width: 100%;
+        }
+    }
+}

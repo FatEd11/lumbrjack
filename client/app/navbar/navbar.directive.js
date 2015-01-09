@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('lumbajackApp')
-  .directive('navbar', function () {
+  .directive('navbar', function ($location) {
     return {
       templateUrl: 'app/navbar/navbar.html',
       restrict: 'EA',
-      link: function (scope, elem, attr, $location) {
+      link: function (scope, elem, attr) {
         var navButton = angular.element('.menu-icon');
 
       	scope.menu = [{

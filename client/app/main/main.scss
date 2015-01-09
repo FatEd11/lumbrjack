@@ -4,7 +4,7 @@
     text-align: center;
 }
 .hero {
-    height: 100%;
+    height: 100vh;
     min-height: 600px;
     background: url(/assets/images/pattern2.jpg) repeat;
     background-size: 1000px;
@@ -12,7 +12,7 @@
     color: #fff;
     h1 {
         font: 2em $logo-font;
-        border: 12px solid $first-green;
+        border: 12px solid $primary-green;
         padding: 0.5em 0;
         margin: 0 auto;
         width: 350px;
@@ -41,7 +41,7 @@
     }
 }
 .about {
-    height: 100%;
+    height: 100vh;
     min-height: 600px;
     h1 {
         font: 700 2.5em $heading-font;

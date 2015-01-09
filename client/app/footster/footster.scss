@@ -1,0 +1,14 @@
+footer {
+	background: $fifth-green;
+	padding: 3em 0;
+	ul {
+		list-style-type: none;
+		a {
+			color: #fff;
+			font-size: 2em;
+			&:hover {
+				color: $fourth-green
+			}
+		}
+	}
+}

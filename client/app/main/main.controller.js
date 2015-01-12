@@ -14,10 +14,8 @@ angular.module('lumbajackApp')
   		console.log(data);
   	};
 
-  	var postMail = function(data, callback) {
-  		$http.post('/api/contact', data).success(callback);
+  	ctrl.postMail = function(data) {
+  		$http.post('/api/contact', data);
   	};
-
-  	ctrl.postMail = postMail(ctrl.emailData, handleSuccess);
 
   }]);

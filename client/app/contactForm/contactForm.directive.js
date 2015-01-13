@@ -33,7 +33,22 @@ angular.module('lumbajackApp')
   	    scope.emailData = emailData;
   	    scope.postMail = postMail;
 
-        
+        // FORM ANIMATION FUNCTIONS
+
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        var inputs = angular.element('input.input__field');
+
+        angular.forEach(inputs, function(inputEl){
+          var inputElement = angular.element(inputEl);
+          inputElement.on('focusout', function(){
+            var valueE = inputElement.val().replace(rtrim, '');
+            if (valueE !== '') {
+              inputElement.parent().addClass('input--filled');
+            } else {
+              inputElement.parent().removeClass('input--filled');
+            }
+          });
+        });
       }
     };
   }]);

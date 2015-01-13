@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('lumbajackApp')
-  .controller('MainCtrl', ['$http', function ($http) {
+  .controller('MainCtrl', ['$http', 'sendMail', function ($http, sendMail) {
   	var ctrl = this;
 
-  	ctrl.emailData = {
+  	var emailData = {
   		from: '',
   		name: '',
   		body: ''
@@ -14,8 +14,11 @@ angular.module('lumbajackApp')
   		console.log(data);
   	};
 
-  	ctrl.postMail = function(data) {
-  		$http.post('/api/contact', data);
-  	};
+  	var postMail = function(){
+      sendMail.post(emailData, handleSuccess);
+    };
+
+    ctrl.emailData = emailData;
+    ctrl.postMail = postMail;
 
   }]);

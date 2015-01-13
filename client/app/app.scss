@@ -16,9 +16,10 @@ $body-font: 'Fira Sans', sans-serif;
  * App-wide Styles
  */
 
-html, body, div.main-contain {
+html, body {
 	font-family: $body-font;
 	font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 p {

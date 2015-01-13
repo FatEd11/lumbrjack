@@ -16,17 +16,25 @@ angular.module('lumbajackApp')
           body: ''
         };
 
+        var l = Ladda.create(document.querySelector('.contact-btn'));
+
         var callback = function (data){
           console.log(data);
+          
   	  	};
   
   	  	var postMail = function(){
-  	      sendMail.post(emailData, callback).then(function(){
-            emailData = {
+          l.start();
+  	      sendMail.post(emailData, callback)
+          .then(function(){
+            // Success function
+            scope.emailData = {
               from: '',
               name: '',
               body: ''
             };
+            angular.element('input.input__field').parent().removeClass('input--filled');
+            l.stop();
           });
   	    };
   
@@ -49,6 +57,7 @@ angular.module('lumbajackApp')
             }
           });
         });
+
       }
     };
   }]);

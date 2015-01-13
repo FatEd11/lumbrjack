@@ -4,14 +4,14 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'elr11789@gmail.com',
-    pass: 'Bbbshyaw11!!'
+    user: process.env.GUSER,
+    pass: process.env.GPASS
   }
 });
 
 exports.send = function(req,res){
   var mailOptions = {
-    to: 'edward.russell@evident-legal.com',
+    to: process.env.CONTACT,
     subject: 'New request on lumbajack from ' + req.body.name,
     sender: req.body.from,
     html: req.body.body

@@ -1,0 +1,23 @@
+<form ng-submit="postMail()" novalidate>
+  <span class="input input--haruki">
+    <input class="input__field input__field--haruki" type="text" id="input-1" ng-model="emailData.name"/>
+    <label class="input__label input__label--haruki" for="input-1">
+      <span class="input__label-content input__label-content--haruki">Name</span>
+    </label>
+  </span>
+  <span class="input input--haruki">
+    <input class="input__field input__field--haruki" type="text" id="input-2" ng-model="emailData.from"/>
+    <label class="input__label input__label--haruki" for="input-2">
+      <span class="input__label-content input__label-content--haruki">Email</span>
+    </label>
+  </span>
+  <span class="input input--haruki">
+    <input class="input__field input__field--haruki" type="text" id="input-3" ng-model="emailData.body"/>
+    <label class="input__label input__label--haruki" for="input-3">
+      <span class="input__label-content input__label-content--haruki">Message</span>
+    </label>
+  </span>
+  <span class="input input--haruki">
+    <input type="submit" value="Submit">
+  </span>
+</form>

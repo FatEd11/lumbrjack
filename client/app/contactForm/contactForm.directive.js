@@ -33,7 +33,7 @@ angular.module('lumbajackApp')
               name: '',
               body: ''
             };
-            angular.element('input.input__field').parent().removeClass('input--filled');
+            angular.element('.input__field').parent().removeClass('input--filled');
             l.stop();
           });
   	    };
@@ -44,7 +44,7 @@ angular.module('lumbajackApp')
         // FORM ANIMATION FUNCTIONS
 
         var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-        var inputs = angular.element('input.input__field');
+        var inputs = angular.element('.input__field');
 
         angular.forEach(inputs, function(inputEl){
           var inputElement = angular.element(inputEl);

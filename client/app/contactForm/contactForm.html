@@ -1,21 +1,26 @@
-<form ng-submit="postMail()" novalidate>
+<form name="contactForm" ng-submit="contactForm.$valid && postMail()" novalidate>
   <span class="input input--haruki">
-    <input class="input__field input__field--haruki" type="text" id="input-1" ng-model="emailData.name"/>
+    <input class="input__field input__field--haruki" type="text" id="input-1" ng-model="emailData.name" required />
     <label class="input__label input__label--haruki" for="input-1">
       <span class="input__label-content input__label-content--haruki">Name</span>
     </label>
   </span>
   <span class="input input--haruki">
-    <input class="input__field input__field--haruki" type="text" id="input-2" ng-model="emailData.from"/>
+    <input class="input__field input__field--haruki" type="email" id="input-2" ng-model="emailData.from" required />
     <label class="input__label input__label--haruki" for="input-2">
       <span class="input__label-content input__label-content--haruki">Email</span>
     </label>
   </span>
   <span class="input input--haruki">
-    <input class="input__field input__field--haruki" type="text" id="input-3" ng-model="emailData.body"/>
-    <label class="input__label input__label--haruki" for="input-3">
+
+    <!-- <input class="input__field input__field--haruki" type="text" id="input-3" ng-model="emailData.body" required /> -->
+
+    <textarea class="input__field input__field--haruki" type="text" id="input-3" ng-model="emailData.body" rows="4" cols="50" required ></textarea>
+
+    <label class="texta input__label input__label--haruki" for="input-3">
       <span class="input__label-content input__label-content--haruki">Message</span>
     </label>
+
   </span>
-    <button type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+    <button ng-class="{valid:contactForm.$valid}" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Submit</span></button>
 </form>

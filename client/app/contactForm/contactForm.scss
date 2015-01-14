@@ -1,3 +1,5 @@
+/* Haruki styles */
+
 .input {
   position: relative;
   z-index: 1;
@@ -19,7 +21,6 @@
   background: #fff;
   color: #fff;
   -webkit-appearance: none;
-  /* for box shadows to show on iOS */ 
 }
 
 .input__field:focus {
@@ -49,8 +50,6 @@
   font-family: $heading-font;
 }
 
-/* Individual styles */
-/* Haruki */
 .input--haruki {
   margin: 1.5em 1em; 
 }
@@ -58,7 +57,7 @@
 .input__field--haruki {
   padding: 0.25em 0.25em;
   width: 100%;
-  background: $second-green;
+  background: $primary-green;
   color: #fff;
   font-size: 1.55em; 
 }
@@ -96,6 +95,10 @@
   bottom: +3px; 
 }
 
+.texta.input__label--haruki::after {
+  bottom: -98px;
+}
+
 .input__field--haruki:focus + .input__label--haruki .input__label-content--haruki,
 .input--filled .input__label-content--haruki {
   -webkit-transform: translate3d(0, -90%, 0);
@@ -112,4 +115,35 @@
 .input--filled .input__label--haruki::after {
   -webkit-transform: translate3d(0, 0.5em, 0);
   transform: translate3d(0, 0.5em, 0); 
+}
+
+/* General */
+
+textarea.input__field--haruki {
+  resize: none;
+  overflow: auto
+}
+
+/* Contact btn */
+
+.contact-btn {
+  opacity: 0;
+  background:transparent;
+  border: 3px solid #fff;
+  border-radius: 0.6em;
+  padding: 0.2em 0.8em;
+  display:block;
+  margin: 0.2em auto 1em;
+  color: #fff;
+  font-family:$heading-font;  
+  font-weight:300;
+  font-size: 1.5em;
+  &:hover{
+    background: #fff;
+    color: $fifth-green
+  }
+}
+
+.contact-btn.valid {
+  opacity: 1
 }

@@ -8,10 +8,16 @@ angular.module('lumbajackApp')
       link: function (scope, elem, attr) {
         var navButton = angular.element('.menu-icon');
 
-      	scope.menu = [{
-      		'title': 'Home',
-      		'link': '/'
-    	  }];
+      	scope.menu = [
+          {
+        		'title': 'Home',
+        		'link': '/'
+      	  },
+          {
+            'title': 'Projects',
+            'link': '/projects'
+          }
+        ];
       	scope.isCollapsed = true;
       	scope.isActive = function(route) {
   	      return route === $location.path();

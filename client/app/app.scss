@@ -45,8 +45,11 @@ p {
 // Component styles are injected through grunt
 // injector
 @import 'contactForm/contactForm.scss';
+@import 'browserImage/browserImage.scss';
 @import 'footster/footster.scss';
 @import 'main/main.scss';
+@import 'mobileDevice/mobileDevice.scss';
 @import 'navbar/navbar.scss';
+@import 'projects/projects.scss';
 @import 'modal/modal.scss';
 // endinjector

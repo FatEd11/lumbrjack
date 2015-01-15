@@ -1,26 +1,35 @@
 <form name="contactForm" ng-submit="contactForm.$valid && postMail()" novalidate>
   <span class="input input--haruki">
-    <input class="input__field input__field--haruki" type="text" id="input-1" ng-model="emailData.name" required />
+    <input class="input__field input__field--haruki" type="text" id="input-1" name="name" ng-model="emailData.name" required />
     <label class="input__label input__label--haruki" for="input-1">
-      <span class="input__label-content input__label-content--haruki">Name</span>
+      <span class="input__label-content input__label-content--haruki">Your name</span>
     </label>
   </span>
   <span class="input input--haruki">
-    <input class="input__field input__field--haruki" type="email" id="input-2" ng-model="emailData.from" required />
+    <input class="input__field input__field--haruki" type="email" id="input-2" name="email" ng-model="emailData.from" required />
     <label class="input__label input__label--haruki" for="input-2">
-      <span class="input__label-content input__label-content--haruki">Email</span>
+      <span class="input__label-content input__label-content--haruki">Your email</span>
     </label>
   </span>
   <span class="input input--haruki">
-
-    <!-- <input class="input__field input__field--haruki" type="text" id="input-3" ng-model="emailData.body" required /> -->
-
-    <textarea class="input__field input__field--haruki" type="text" id="input-3" ng-model="emailData.body" rows="4" cols="50" required ></textarea>
-
+    <textarea class="input__field input__field--haruki" type="text" id="input-3" name="message" ng-model="emailData.body" rows="4" cols="50" required ></textarea>
     <label class="texta input__label input__label--haruki" for="input-3">
-      <span class="input__label-content input__label-content--haruki">Message</span>
+      <span class="input__label-content input__label-content--haruki">What can I do you for?</span>
     </label>
-
   </span>
-    <button ng-class="{valid:contactForm.$valid}" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+
+  <div class="error-messages">
+    <div ng-if="contactForm.$submitted">
+      <div ng-if="contactForm.name.$error.required">I need your name bro...</div>
+      <div ng-if="contactForm.email.$error.required">Need an email address homie</div>
+      <div ng-if="contactForm.email.$error.email">
+        That's not an email address...
+      </div>
+      <div ng-if="contactForm.message.$error.required">You haven't told me how can I help</div>
+    </div>
+    <div ng-show="messageSent" class="sent-message" ng-class="{sent: messageSent}">Message recieved!</div>
+  </div>
+
+  <button ng-class="{valid:contactForm.$valid}" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Send</span></button>
+  
 </form>

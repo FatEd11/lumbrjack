@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('lumbajackApp')
-  .directive('contactForm', ['sendMail', function (sendMail) {
+  .directive('contactForm', ['sendMail', '$timeout', function (sendMail, $timeout) {
     return {
       templateUrl: 'app/contactForm/contactForm.html',
       restrict: 'EA',
@@ -16,18 +16,20 @@ angular.module('lumbajackApp')
           body: ''
         };
 
-        var l = Ladda.create(document.querySelector('.contact-btn'));
+        scope.messageSent = false;
+        var sentMessage = function(){
+          scope.messageSent = true;
+          $timeout(function(){
+            scope.messageSent=false;
+          }, 5000);
+        };
 
-        var callback = function (data){
-          console.log(data);
-          
-  	  	};
+        var l = Ladda.create(document.querySelector('.contact-btn'));
   
   	  	var postMail = function(){
           l.start();
-  	      sendMail.post(emailData, callback)
-          .then(function(){
-            // Success function
+  	       sendMail.post(emailData)
+           .then(function(){
             scope.emailData = {
               from: '',
               name: '',
@@ -35,6 +37,8 @@ angular.module('lumbajackApp')
             };
             angular.element('.input__field').parent().removeClass('input--filled');
             l.stop();
+            scope.contactForm.$setPristine();
+            sentMessage();
           });
   	    };
   

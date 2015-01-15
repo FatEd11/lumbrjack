@@ -15,7 +15,8 @@
     "font-awesome": ">=4.1.0",
     "lodash": "~2.4.1",
     "angular-ui-router": "~0.2.10",
-    "ladda": "~0.9.4"
+    "ladda": "~0.9.4",
+    "ng-messages": "*"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

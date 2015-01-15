@@ -1,14 +1,26 @@
 footer {
 	background: $fifth-green;
-	padding: 3em 0;
+	padding: 1em 0 2em;
+	h2 {
+		font-family: $heading-font;
+		color: #fff;
+		text-align: center
+	}
+}
+
+.social-icons {
 	ul {
+		-webkit-padding-start: 0;
 		list-style-type: none;
-		a {
-			color: #fff;
-			font-size: 2em;
-			&:hover {
-				color: $fourth-green
-			}
+	}
+	li {
+		text-align: center;
+	}
+	a {
+		color: #fff;
+		font-size: 2em;
+		&:hover {
+			color: $fourth-green
 		}
 	}
 }

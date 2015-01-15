@@ -27,7 +27,7 @@
       </div>
       <div ng-if="contactForm.message.$error.required">You haven't told me how can I help</div>
     </div>
-    <div ng-show="messageSent" class="sent-message" ng-class="{sent: messageSent}">Message recieved!</div>
+    <div class="sent-message" ng-class="{sent: messageSent}">Message recieved!</div>
   </div>
 
   <button ng-class="{valid:contactForm.$valid}" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Send</span></button>

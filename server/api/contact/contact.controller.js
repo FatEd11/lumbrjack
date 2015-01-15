@@ -13,8 +13,10 @@ exports.send = function(req,res){
   var mailOptions = {
     to: process.env.CONTACT,
     subject: 'New request on lumbajack from ' + req.body.name,
+    replyTo: req.body.from,
+    from: req.body.from,
     sender: req.body.from,
-    html: req.body.body
+    html: req.body.body + '<br/>Email:' + req.body.from
   };
   transporter.sendMail(mailOptions, function(err, info){
     if (err) {

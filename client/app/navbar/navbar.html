@@ -1,16 +1,15 @@
-<div class="navbar-fixed-top">
-  <div class="container">
+<div class="top-nav" ng-class="{open:!isCollapsed}">
+  <div class="container-fluid">
 
-    <div class="navbar-header">
+    <div class="clearfix nav-header">
       <a class="menu-icon" ng-click="isCollapsed = !isCollapsed">
         <span></span>
       </a>
       <a href="/" class="navbar-brand">lumbajack</a>
     </div>
-
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <div collapse="isCollapsed" class="" id="navbar-main">
       <ul class="nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+        <li ng-repeat="item in menu">
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>
       </ul>

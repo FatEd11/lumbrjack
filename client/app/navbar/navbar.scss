@@ -1,26 +1,54 @@
+/* GENERAL */
+
+.top-nav {
+	top: 0;
+	border-width: 0 0 1px;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	transition: background .5s ease, height 1s ease;
+}
+
+.navbar-nav > li > a {
+	font-family: $heading-font;
+	color: #fff;
+	font-size: 1.2em;
+}
+
 /* BRAND */
 
 .navbar-brand {
-    font: 1.5em $logo-font;
-    color: #fff;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 0 #000;
+  font: 1.5em $logo-font;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  width: 100%;
+  text-align: center;
 }
 
 a.navbar-brand:hover {
 	color: #fff;
 }
 
+/* NAV HEADER */
+
+.nav-header {
+	width: 100%;
+	position: relative;
+}
+
 /* MENU ICON */
 
 .menu-icon {
-	position: relative;
+	position: absolute;
+	top: 0;
+	right: 0;
 	display:  inline-block;
-	width: 20px;
-	height: 16px;
+	width: 35px;
+	height: 35px;
 	bottom: 2px;
 	float: right;
-	margin: 1em 1.5em 0 0;
+	margin: 1em 0 0;
 }
 .menu-icon:hover {
 	cursor: pointer
@@ -76,4 +104,11 @@ a.navbar-brand:hover {
 	margin-top: 0;
 	transform: rotate(-45deg);
 	transition-delay: 0, .2s;
+}
+
+/* Nav open */
+
+.top-nav.open {
+	background: rgba(0,0,0,0.6);
+	height: 100%;
 }

@@ -19,9 +19,6 @@ angular.module('lumbajackApp')
           }
         ];
       	scope.isCollapsed = true;
-      	scope.isActive = function(route) {
-  	      return route === $location.path();
-  	    };
 
         navButton.on('click', function(){
           navButton.toggleClass('open');

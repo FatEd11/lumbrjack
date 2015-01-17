@@ -10,10 +10,26 @@
 	transition: background .5s ease, height 1s ease;
 }
 
-.navbar-nav > li > a {
-	font-family: $heading-font;
-	color: #fff;
-	font-size: 1.2em;
+.nav-list {
+	list-style-type: none;
+	margin: 0.5em 0;
+	-webkit-padding-start: 0;
+	li {
+		position: relative;
+		display: block;
+		margin-bottom: 0.5em;
+		a {
+			font-family: $heading-font;
+			color: #fff;
+			font-size: 1.3em;
+			font-weight: 600;
+			display: block;
+			&:hover {
+				text-decoration: none;
+				color: $fourth-green;
+			}
+		}
+	}
 }
 
 /* BRAND */
@@ -24,10 +40,13 @@
   text-shadow: 2px 2px 0 #000;
   width: 100%;
   text-align: center;
-}
-
-a.navbar-brand:hover {
-	color: #fff;
+  &:hover {
+  	color: #fff
+  }
+  &:focus {
+  	outline: none;
+  	color: #fff
+  }
 }
 
 /* NAV HEADER */
@@ -106,7 +125,12 @@ a.navbar-brand:hover {
 	transition-delay: 0, .2s;
 }
 
-/* Nav open */
+/* Nav states */
+
+.top-nav.fill {
+	background: url(/assets/images/pattern2.png) repeat;
+  background-size: 1000px;
+}
 
 .top-nav.open {
 	background: rgba(0,0,0,0.6);

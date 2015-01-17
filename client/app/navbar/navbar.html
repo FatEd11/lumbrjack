@@ -1,4 +1,4 @@
-<div class="top-nav" ng-class="{open:!isCollapsed}">
+<div class="top-nav" ng-class="{open:!isCollapsed, fill:isFilled()}">
   <div class="container-fluid">
 
     <div class="clearfix nav-header">
@@ -8,7 +8,7 @@
       <a href="/" class="navbar-brand">lumbajack</a>
     </div>
     <div collapse="isCollapsed" class="" id="navbar-main">
-      <ul class="nav navbar-nav">
+      <ul class="nav-list">
         <li ng-repeat="item in menu">
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>

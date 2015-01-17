@@ -23,6 +23,14 @@ angular.module('lumbajackApp')
         navButton.on('click', function(){
           navButton.toggleClass('open');
         });
+
+        scope.isFilled = function () {
+          if ($location.path() === '/') {
+            return false;
+          }
+          return true;
+        };
+
       }
     };
   });

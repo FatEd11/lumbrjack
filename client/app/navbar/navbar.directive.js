@@ -38,15 +38,16 @@ angular.module('lumbajackApp')
           ngwindow.bind('scroll', function(){
             scrollPos = this.pageYOffset;
             if (scrollPos > height){
-              //scope.isFilled = true;
-              console.log('true');
+              scope.isFilled = true;
+              scope.$apply();
+            } else {
+              scope.isFilled = false;
+              scope.$apply();
             }
           });
         } else {
           scope.isFilled = true;
         }
-         
-
       }
     };
   });

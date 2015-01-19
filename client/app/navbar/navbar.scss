@@ -7,7 +7,7 @@
 	right: 0;
 	left: 0;
 	z-index: 1030;
-	transition: background .5s ease, height 1s ease;
+	transition: background 1s ease, height 1s ease;
 }
 
 .nav-list {
@@ -126,6 +126,10 @@
 }
 
 /* Nav states */
+
+.collapsing {
+	transition: height 0s;
+}
 
 .top-nav.fill {
 	background: url(/assets/images/pattern2.png) repeat;

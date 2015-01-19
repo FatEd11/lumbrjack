@@ -27,7 +27,7 @@ p {
 	line-height: 1.4;
 }
 
-:focus {
+:focus, a:focus {
 	outline: none;
 }
 

@@ -7,7 +7,8 @@
 	right: 0;
 	left: 0;
 	z-index: 1030;
-	transition: background 1s ease, height 1s ease;
+	background: transparent;
+	transition: background 1s ease;
 }
 
 .nav-list {
@@ -40,6 +41,8 @@
   text-shadow: 2px 2px 0 #000;
   width: 100%;
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in;
   &:hover {
   	color: #fff
   }
@@ -62,12 +65,13 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	display:  inline-block;
+	display: block;
 	width: 35px;
 	height: 35px;
 	bottom: 2px;
 	float: right;
 	margin: 1em 0 0;
+	z-index: 1000;
 }
 .menu-icon:hover {
 	cursor: pointer
@@ -127,13 +131,16 @@
 
 /* Nav states */
 
-.collapsing {
-	transition: height 0s;
-}
+// .collapsing {
+// 	transition: height 0s;
+// }
 
 .top-nav.fill {
 	background: url(/assets/images/pattern2.png) repeat;
-  background-size: 1000px;
+	border-bottom: 2px solid black;
+	.navbar-brand {
+		opacity: 1;
+	}
 }
 
 .top-nav.open {

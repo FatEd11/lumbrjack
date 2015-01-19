@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('lumbajackApp')
-  .directive('navbar', function ($location, $window) {
+  .directive('navbar', function ($location, $rootScope, $state, $window) {
     return {
       templateUrl: 'app/navbar/navbar.html',
       restrict: 'EA',
@@ -34,20 +34,25 @@ angular.module('lumbajackApp')
 
         scope.isFilled = false;
 
-        if ($location.path() === '/') {
-          ngwindow.bind('scroll', function(){
-            scrollPos = this.pageYOffset;
-            if (scrollPos > height){
-              scope.isFilled = true;
-              scope.$apply();
+        $rootScope.$on('$stateChangeSuccess', 
+          function(ev, to, toP, from, fromP){
+            $state.current = to;
+            var isMain = $state.is('main');
+            if (isMain) {
+              ngwindow.bind('scroll', function(){
+                scrollPos = this.pageYOffset;
+                if (scrollPos > height){
+                  scope.isFilled = true;
+                  scope.$apply();
+                } else {
+                  scope.isFilled = false;
+                  scope.$apply();
+                }
+              });
             } else {
-              scope.isFilled = false;
-              scope.$apply();
+              scope.isFilled = true;
             }
-          });
-        } else {
-          scope.isFilled = true;
-        }
+        });
       }
     };
   });

@@ -6,7 +6,12 @@ angular.module('lumbajackApp')
       templateUrl: 'app/navbar/navbar.html',
       restrict: 'EA',
       link: function (scope, elem, attr) {
+
+        // Inits
+
         var navButton = angular.element('.menu-icon');
+        var navLink = angular.element('.nav-list');
+        var navSub = angular.element('.sub-menu');
         var ngwindow = angular.element($window);
         var height = $window.innerHeight;
         var scrollPos = 0;
@@ -15,22 +20,52 @@ angular.module('lumbajackApp')
           height = $window.innerHeight;
         });
 
+        console.log(navSub);
+
       	scope.menu = [
           {
         		'title': 'Home',
-        		'link': '/'
+        		'link': 'main',
+            'submenu': [
+              {
+                'title': 'About',
+                'link': 'about'
+              },
+              {
+                'title': 'Projects',
+                'link': 'portfolio'
+              }
+            ]
       	  },
           {
             'title': 'Projects',
-            'link': '/projects'
+            'link': 'projects'
           }
         ];
+
+        // Submenu
+
+        var hasSubmenu = function(item) {
+          return item.hasOwnProperty('submenu');
+        };
+
+        scope.hasSubmenu = hasSubmenu;
+
+
+        // Open and close menu
 
       	scope.isCollapsed = true;
 
         navButton.on('click', function(){
           navButton.toggleClass('open');
         });
+
+        navLink.on('click', function(){
+          scope.isCollapsed = true;
+          navButton.removeClass('open');
+        });
+
+        // Fill menu
 
         scope.isFilled = false;
 
@@ -52,7 +87,7 @@ angular.module('lumbajackApp')
             } else {
               scope.isFilled = true;
             }
-        });
-      }
+          });
+        }
     };
   });

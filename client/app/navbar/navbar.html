@@ -7,11 +7,24 @@
       </a>
       <a href="/" class="navbar-brand">lumbajack</a>
     </div>
-    <div collapse="isCollapsed" class="" id="navbar-main">
+
+    <div collapse="isCollapsed" id="navbar-main">
       <ul class="nav-list">
+
         <li ng-repeat="item in menu">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
+
+            <a ui-sref="{{item.link}}">{{item.title}}</a>
+
+            <ul class="sub-menu" ng-show="$state.is(item.link) && hasSubmenu(item)">
+
+              <li ng-repeat="submenu in item.submenu">
+                <a href="#" scroll-to="{{submenu.link}}">{{submenu.title}}</a>
+              </li>
+
+            </ul>
+
         </li>
+
       </ul>
     </div>
 

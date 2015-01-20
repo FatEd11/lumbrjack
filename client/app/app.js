@@ -6,7 +6,8 @@ angular.module('lumbajackApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ngMessages'
+  'ngMessages',
+  'smoothScroll'
 ])
   .run(function($rootScope, $state, $stateParams){
     $rootScope.$state = $state;

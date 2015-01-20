@@ -41,6 +41,26 @@
 				text-decoration: none;
 				color: $fourth-green;
 			}
+			&::before {
+				margin-right: 0.5em;
+				position: relative;
+				top: 0.4em;
+			}
+		}
+		&:nth-child(3n+1) a {
+			&::before{
+				content: url(/assets/images/beard-ico.png)
+			}
+		}
+		&:nth-child(3n+2) a {
+			&::before {
+				content: url(/assets/images/axe-ico.png)
+			}
+		}
+		&:nth-child(3n+3) a {
+			&::before {
+				content: url(/assets/images/log-ico.png)
+			}
 		}
 	}
 }

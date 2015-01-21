@@ -13,7 +13,7 @@
 
         <li ng-repeat="item in menu">
 
-            <a ui-sref="{{item.link}}" ng-click="closeNav()">{{item.title}}</a>
+            <a ui-sref="{{item.link}}" ui-sref-active="active" ng-click="closeNav()">{{item.title}}</a>
 
             <ul class="sub-menu" ng-if="$state.is(item.link) && hasSubmenu(item)">
 

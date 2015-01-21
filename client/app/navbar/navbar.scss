@@ -30,6 +30,9 @@
 	font-family: $heading-font;
 	font-size: 1.3em;
 	font-weight: 600;
+	.active {
+		text-decoration: underline;
+	}
 	li {
 		position: relative;
 		display: block;

@@ -10,7 +10,6 @@ angular.module('lumbajackApp')
 
         // Inits
 
-        var navButton = angular.element('.menu-icon');
         var ngwindow = angular.element($window);
         var height = $window.innerHeight;
         var scrollPos = 0;
@@ -53,11 +52,17 @@ angular.module('lumbajackApp')
 
       	scope.isCollapsed = true;
 
+        var openModal = function (){
+          angular.element('body').toggleClass('modal-open');
+        };
+
         var closeNav = function (){
           scope.isCollapsed = true;
+          openModal();
         };
 
         scope.closeNav = closeNav;
+        scope.openModal = openModal;
 
         // Fill menu
 

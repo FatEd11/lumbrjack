@@ -10,8 +10,6 @@ angular.module('lumbajackApp')
         // Inits
 
         var navButton = angular.element('.menu-icon');
-        var navLink = angular.element('.nav-list');
-        var navSub = angular.element('.sub-menu');
         var ngwindow = angular.element($window);
         var height = $window.innerHeight;
         var scrollPos = 0;
@@ -19,8 +17,6 @@ angular.module('lumbajackApp')
         ngwindow.bind('resize', function(){
           height = $window.innerHeight;
         });
-
-        console.log(navSub);
 
       	scope.menu = [
           {
@@ -50,7 +46,7 @@ angular.module('lumbajackApp')
         };
 
         scope.hasSubmenu = hasSubmenu;
-
+        
 
         // Open and close menu
 
@@ -58,12 +54,15 @@ angular.module('lumbajackApp')
 
         navButton.on('click', function(){
           navButton.toggleClass('open');
+
         });
 
-        navLink.on('click', function(){
-          scope.isCollapsed = true;
+        var closeNav = function (){
           navButton.removeClass('open');
-        });
+          scope.isCollapsed = true;
+        };
+
+        scope.closeNav = closeNav;
 
         // Fill menu
 

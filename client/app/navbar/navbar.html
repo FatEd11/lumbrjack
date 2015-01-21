@@ -5,7 +5,7 @@
       <a class="menu-icon" ng-click="isCollapsed = !isCollapsed">
         <span></span>
       </a>
-      <a href="/" class="navbar-brand">lumbajack</a>
+      <a ui-sref="main" class="navbar-brand">lumbajack</a>
     </div>
 
     <div collapse="isCollapsed" id="navbar-main">
@@ -13,12 +13,12 @@
 
         <li ng-repeat="item in menu">
 
-            <a ui-sref="{{item.link}}">{{item.title}}</a>
+            <a ui-sref="{{item.link}}" ng-click="closeNav()">{{item.title}}</a>
 
-            <ul class="sub-menu" ng-show="$state.is(item.link) && hasSubmenu(item)">
+            <ul class="sub-menu" ng-if="$state.is(item.link) && hasSubmenu(item)">
 
               <li ng-repeat="submenu in item.submenu">
-                <a href="#" scroll-to="{{submenu.link}}">{{submenu.title}}</a>
+                <a href="#" scroll-to="{{submenu.link}}" ng-click="closeNav()">{{submenu.title}}</a>
               </li>
 
             </ul>

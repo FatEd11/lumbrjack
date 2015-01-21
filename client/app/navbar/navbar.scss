@@ -27,16 +27,16 @@
 	list-style-type: none;
 	margin: 0.5em 0;
 	-webkit-padding-start: 0;
+	font-family: $heading-font;
+	font-size: 1.3em;
+	font-weight: 600;
 	li {
 		position: relative;
 		display: block;
 		margin-bottom: 0.5em;
 		a {
-			font-family: $heading-font;
-			color: #fff;
-			font-size: 1.3em;
-			font-weight: 600;
 			display: block;
+			color: #fff;
 			&:hover {
 				text-decoration: none;
 				color: $fourth-green;
@@ -62,6 +62,13 @@
 				content: url(/assets/images/log-ico.png)
 			}
 		}
+	}
+}
+
+.sub-menu {
+	font-weight: 300;
+	li a::before {
+		content: none;
 	}
 }
 
@@ -167,10 +174,6 @@
 }
 
 /* Nav states */
-
-// .collapsing {
-// 	transition: height 0s;
-// }
 
 .top-nav.fill {
 	.nav-fill {

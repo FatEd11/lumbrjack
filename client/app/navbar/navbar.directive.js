@@ -5,6 +5,7 @@ angular.module('lumbajackApp')
     return {
       templateUrl: 'app/navbar/navbar.html',
       restrict: 'EA',
+      scope: true,
       link: function (scope, elem, attr) {
 
         // Inits

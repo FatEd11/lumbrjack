@@ -53,13 +53,7 @@ angular.module('lumbajackApp')
 
       	scope.isCollapsed = true;
 
-        navButton.on('click', function(){
-          navButton.toggleClass('open');
-
-        });
-
         var closeNav = function (){
-          navButton.removeClass('open');
           scope.isCollapsed = true;
         };
 

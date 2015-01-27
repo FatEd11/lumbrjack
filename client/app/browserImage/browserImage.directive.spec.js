@@ -3,7 +3,7 @@
 describe('Directive: browserImage', function () {
 
   // load the directive's module and view
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
   beforeEach(module('app/browserImage/browserImage.html'));
 
   var element, scope;

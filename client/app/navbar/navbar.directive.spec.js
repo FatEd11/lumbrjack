@@ -3,7 +3,7 @@
 describe('Directive: navbar', function () {
 
   // load the directive's module and view
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
   beforeEach(module('app/navbar/navbar.html'));
 
   var element, scope;

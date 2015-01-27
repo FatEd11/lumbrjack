@@ -3,7 +3,7 @@
 describe('Directive: footster', function () {
 
   // load the directive's module and view
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
   beforeEach(module('app/footster/footster.html'));
 
   var element, scope;

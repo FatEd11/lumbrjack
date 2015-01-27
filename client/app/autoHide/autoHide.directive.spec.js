@@ -3,7 +3,7 @@
 describe('Directive: autoHide', function () {
 
   // load the directive's module
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
 
   var element,
     scope;

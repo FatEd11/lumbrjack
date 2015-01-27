@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .directive('mobileDevice', function () {
     return {
       templateUrl: 'app/mobileDevice/mobileDevice.html',

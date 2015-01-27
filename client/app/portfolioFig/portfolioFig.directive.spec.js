@@ -3,7 +3,7 @@
 describe('Directive: portfolioFig', function () {
 
   // load the directive's module and view
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
   beforeEach(module('app/portfolioFig/portfolioFig.html'));
 
   var element, scope;

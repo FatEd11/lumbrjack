@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .directive('autoHide', function () {
     return {
       restrict: 'EA',

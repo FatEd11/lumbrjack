@@ -3,7 +3,7 @@
 describe('Directive: contactForm', function () {
 
   // load the directive's module and view
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbajrckApp'));
   beforeEach(module('app/contactForm/contactForm.html'));
 
   var element, scope;

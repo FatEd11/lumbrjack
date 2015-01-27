@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .directive('footster', function () {
     return {
       templateUrl: 'app/footster/footster.html',

@@ -3,7 +3,7 @@
 describe('Service: sendMail', function () {
 
   // load the service's module
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
 
   // instantiate service
   var sendMail;

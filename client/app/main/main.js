@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('main', {

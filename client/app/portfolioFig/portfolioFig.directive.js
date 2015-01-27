@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .directive('portfolioFig', function () {
     return {
       templateUrl: 'app/portfolioFig/portfolioFig.html',

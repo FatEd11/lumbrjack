@@ -1,12 +1,11 @@
 'use strict';
 
-angular.module('lumbajackApp', [
+angular.module('lumbrjackApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ngMessages',
   'smoothScroll'
 ])
   .run(function($rootScope, $state, $stateParams){

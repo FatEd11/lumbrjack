@@ -1,4 +1,4 @@
-# lumbajack
+# lumbrjack
 ###### Hewing the web by hand since 2011
 -----
 A **MEAN** application hewn with precision to display my code carving mastery. 

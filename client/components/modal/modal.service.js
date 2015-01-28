@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

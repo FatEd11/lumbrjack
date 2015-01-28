@@ -1,10 +1,8 @@
-<div class="portfolio-figure cs-style-3 clearfix">
-  <figure>
-    <img ng-src="{{figimage}}" alt="{{alt}}">
-    <figcaption>
-        <h3>{{title}}</h3>
-        <span>{{subtitle}}</span>
-        <a ui-sref="{{link}}">Take a look</a>
-    </figcaption>
-  </figure>
-</div>
+<figure class="portfolio-figure cs-style-3" hm-tap="tapHover($event)">
+  <img ng-src="{{figimage}}" alt="{{alt}}">
+  <figcaption>
+      <h3>{{title}}</h3>
+      <span>{{subtitle}}</span>
+      <a ui-sref="{{link}}">Take a look</a>
+  </figcaption>
+</figure>

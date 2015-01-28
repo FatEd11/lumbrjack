@@ -13,13 +13,16 @@ angular.module('lumbrjackApp')
         link:'@'
       },
       link: function (scope, element, attrs) {
+
+        var tapHover = function($event){
+          $event.element.toggleClass('cs-hover');
+        };
+
+        //Public methods
+
         scope.figimage = '/assets/images/' + scope.image;
+        scope.tapHover = tapHover;
 
-        var figure = angular.element('.cs-style-3').find('figure');
-
-        figure.on('touchend', function(){
-          figure.toggleClass('cs-hover');
-        });
       }
     };
   });

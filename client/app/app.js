@@ -6,7 +6,8 @@ angular.module('lumbrjackApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'smoothScroll'
+  'smoothScroll',
+  'hmTouchEvents'
 ])
   .run(function($rootScope, $state, $stateParams){
     $rootScope.$state = $state;

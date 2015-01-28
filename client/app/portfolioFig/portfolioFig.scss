@@ -1,14 +1,12 @@
-.portfolio-figure {
+figure.portfolio-figure {
   display: inline-block;
-  figure {
-    margin: 0;
-    position: relative;
-    max-width: 500px;
-    img {
-      max-width: 100%;
-      display: block;
-      position: relative
-    }
+  margin: 0;
+  position: relative;
+  max-width: 500px;
+  img {
+    max-width: 100%;
+    display: block;
+    position: relative
   }
   figcaption {
     position: absolute;
@@ -34,20 +32,12 @@
   }
 }
 
-.cs-style-3 figure {
-    overflow: hidden;
-}
-
-.cs-style-3 figure img {
+figure.cs-style-3 {
+  overflow: hidden;
+  img {
     transition: transform 0.4s;
-}
-
-.cs-style-3 figure:hover img,
-.cs-style-3 figure.cs-hover img {
-    transform: translateY(-50px);
-}
-
-.cs-style-3 figcaption {
+  }
+  figcaption {
     height: 100px;
     width: 100%;
     top: auto;
@@ -55,17 +45,22 @@
     opacity: 0;
     transform: translateY(100%);
     transition: transform 0.4s, opacity 0.1s 0.3s;
+    a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
 }
 
-.cs-style-3 figure:hover figcaption,
-.cs-style-3 figure.cs-hover figcaption {
+.no-touch figure.cs-style-3:hover img,
+figure.cs-style-3.cs-hover img {
+    transform: translateY(-50px);
+}
+
+.no-touch figure.cs-style-3:hover figcaption,
+figure.cs-style-3.cs-hover figcaption {
     opacity: 1;
     transform: translateY(0px);
     transition: transform 0.4s, opacity 0.1s;
-}
-
-.cs-style-3 figcaption a {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
 }

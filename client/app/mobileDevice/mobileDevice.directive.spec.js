@@ -3,7 +3,7 @@
 describe('Directive: mobileDevice', function () {
 
   // load the directive's module and view
-  beforeEach(module('lumbajackApp'));
+  beforeEach(module('lumbrjackApp'));
   beforeEach(module('app/mobileDevice/mobileDevice.html'));
 
   var element, scope;

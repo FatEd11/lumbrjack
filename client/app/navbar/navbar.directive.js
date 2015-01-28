@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .directive('navbar', function ($location, $rootScope, $state, $window) {
     return {
       templateUrl: 'app/navbar/navbar.html',

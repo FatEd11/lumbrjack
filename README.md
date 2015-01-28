@@ -16,4 +16,4 @@ Libraries I have used buidling this site (because credit where credit's due):
 *    [Ladda](http://lab.hakim.se/ladda/) because spinners make life better  
 
 
-&#169; 2015 Edward Russell - the __lumbajack__
+&#169; 2015 Edward Russell - the __lumbrjack__

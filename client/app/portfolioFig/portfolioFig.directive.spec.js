@@ -1,10 +1,10 @@
 'use strict';
 
-describe('Directive: navbar', function () {
+describe('Directive: portfolioFig', function () {
 
   // load the directive's module and view
   beforeEach(module('lumbrjackApp'));
-  beforeEach(module('app/navbar/navbar.html'));
+  beforeEach(module('app/portfolioFig/portfolioFig.html'));
 
   var element, scope;
 
@@ -13,9 +13,9 @@ describe('Directive: navbar', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<navbar></navbar>');
+    element = angular.element('<portfolio-fig></portfolio-fig>');
     element = $compile(element)(scope);
     scope.$apply();
-    expect(element.text()).toBe('this is the navbar directive');
+    expect(element.text()).toBe('this is the portfolioFig directive');
   }));
 });

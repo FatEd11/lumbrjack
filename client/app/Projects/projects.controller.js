@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .controller('ProjectsCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

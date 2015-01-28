@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .controller('MainCtrl', function () {
   	var ctrl = this;
 

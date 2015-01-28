@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .directive('browserImage', function () {
     return {
       templateUrl: 'app/browserImage/browserImage.html',

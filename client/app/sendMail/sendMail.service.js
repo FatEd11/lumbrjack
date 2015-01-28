@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lumbajackApp')
+angular.module('lumbrjackApp')
   .factory('sendMail', ['$http', '$q', function ($http, $q) {
   	return {
   		post: function (data) {

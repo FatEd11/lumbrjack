@@ -85,6 +85,7 @@ angular.module('lumbrjackApp')
               });
             } else {
               scope.isFilled = true;
+              console.log('not main');
             }
           });
         }

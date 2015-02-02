@@ -1,9 +1,20 @@
 .portfolio-head {
-  background: url(/assets/images/aerowood.png) repeat;
-  padding: 3em 0;
+  background: url(/assets/images/aerowood2.png) repeat;
+  padding: 1em 0.5em;
+  height: 50vh;
+  max-height: 300px;
   text-align: center;
   color: $primary-green;
+  display: table;
+  width: 100%;
   p {
-    font-size: 1.5em
+    font-size: 1.3em;
+    color: $first-green;
+  }
+  .portfolio-content {
+    max-width: 400px;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
   }
 }

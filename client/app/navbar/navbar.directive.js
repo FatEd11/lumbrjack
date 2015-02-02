@@ -26,10 +26,6 @@ angular.module('lumbrjackApp')
               {
                 'title': 'About',
                 'link': 'about'
-              },
-              {
-                'title': 'Projects',
-                'link': 'portfolio'
               }
             ]
       	  },
@@ -71,9 +67,8 @@ angular.module('lumbrjackApp')
         $rootScope.$on('$stateChangeSuccess', 
           function(ev, to, toP, from, fromP){
             $state.current = to;
-            var isMain = $state.is('main');
-            if (isMain) {
-              ngwindow.bind('scroll', function(){
+            if (to.name === 'main') {
+              ngwindow.on('scroll', function(){
                 scrollPos = this.pageYOffset;
                 if (scrollPos > height){
                   scope.isFilled = true;
@@ -85,7 +80,7 @@ angular.module('lumbrjackApp')
               });
             } else {
               scope.isFilled = true;
-              console.log('not main');
+              ngwindow.off('scroll');
             }
           });
         }

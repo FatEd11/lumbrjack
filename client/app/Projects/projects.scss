@@ -1,5 +1,5 @@
 .portfolio-head {
-  background: url(/assets/images/aerowood2.png) repeat;
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,265,1) 100%), url(/assets/images/aerowood2.png) repeat;
   padding: 1em 0.5em;
   height: 50vh;
   max-height: 300px;
@@ -7,14 +7,42 @@
   color: $primary-green;
   display: table;
   width: 100%;
+  h1 {
+    font-weight: 300;
+  }
   p {
     font-size: 1.3em;
     color: $first-green;
   }
   .portfolio-content {
-    max-width: 400px;
-    margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
   }
+}
+
+.portfolio-grid {
+  text-align: center;
+  .portfolio-figure {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-grid .portfolio-figure {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .portfolio-grid .portfolio-figure {
+        max-width: 50%;
+        margin: 0 0 -0.37em -0.3em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .portfolio-grid .portfolio-figure {
+        max-width: 33.3333%;
+        margin: 0 0 -0.37em -0.3em;
+    }
 }

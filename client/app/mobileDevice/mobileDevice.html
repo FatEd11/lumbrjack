@@ -1,13 +1,13 @@
-<div class="marvel-device iphone6 silver">
-    <div class="top-bar"></div>
-    <div class="sleep"></div>
-    <div class="volume"></div>
+<div class="marvel-device" ng-class="[type, colour, orientation]">
+    <div ng-if="topBar" class="top-bar"></div> <!-- Not on ipad -->
+    <div ng-if="sleep" class="sleep"></div> <!-- Not on ipad, lumia920, htc-one -->
+    <div ng-if="volume" class="volume"></div> <!-- Not on ipad, s5, htc-one -->
     <div class="camera"></div>
-    <div class="sensor"></div>
-    <div class="speaker"></div>
+    <div ng-if="sensor" class="sensor"></div> <!-- Not on ipad, nexus5, lumia920 -->
+    <div ng-if="speaker" class="speaker"></div> <!-- Not on ipad, nexus5 -->
     <div class="screen">
         <img ng-src="{{image}}" alt="{{alt}}">
     </div>
-    <div class="home"></div>
-    <div class="bottom-bar"></div>
+    <div ng-if="home" class="home"></div> <!-- nexus5, lumia920, htc-one -->
+    <div ng-if="bottomBar" class="bottom-bar"></div> <!-- Not on ipad, s5, nexus5, lumia920, htc-one -->
 </div>

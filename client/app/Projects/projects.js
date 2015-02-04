@@ -6,22 +6,22 @@ angular.module('lumbrjackApp')
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/projects/projects.html',
-        controller: 'ProjectsCtrl as '
+        controller: 'ProjectsCtrl as projects'
       })
       .state('stl', {
       	url: '/simplify-the-law',
-      	templateUrl: 'app/projects/project-views/stl.html'
+      	templateUrl: 'app/projects/project-views/stl.html',
+        controller: 'ProjectsCtrl as projects'
       })
-      .state('projects.stl.fjg', {
-      	url: '/myfjg',
-      	templateUrl: 'app/projects/project-views/fjg.html'
+      .state('stl.fjg', {
+        templateUrl: 'app/projects/project-views/fjg.html'
       })
-      .state('projects.stl.rc', {
-      	url: '/right-call',
-      	templateUrl: 'app/projects/project-views/rc.html'
+      .state('stl.rc', {
+        templateUrl: 'app/projects/project-views/rc.html'
       })
       .state('fsc', {
       	url: '/frith-street',
       	templateUrl: 'app/projects/project-views/fsc.html'
       });
   });
+

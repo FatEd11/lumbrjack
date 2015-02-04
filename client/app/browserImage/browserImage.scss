@@ -19,6 +19,9 @@
         display: inline-block;
         border-radius: 50%;
         background-color: #FFF;
+        .circle-red {background-color: #ff544d}
+        .circle-yellow {background-color: #ffb528}
+        .circle-green {background-color: #24c339}
     }
     .circles { margin: 3px 11px; }
     .content {

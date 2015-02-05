@@ -2,10 +2,10 @@
 
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'zoho',
   auth: {
-    user: process.env.GUSER,
-    pass: process.env.GPASS
+    user: process.env.EUSER,
+    pass: process.env.EPASS
   }
 });
 
@@ -14,8 +14,7 @@ exports.send = function(req,res){
     to: process.env.CONTACT,
     subject: 'New request on lumbajack from ' + req.body.name,
     replyTo: req.body.from,
-    from: req.body.from,
-    sender: req.body.from,
+    from: process.env.EUSER,
     html: req.body.body + '<br/>Email:' + req.body.from
   };
   transporter.sendMail(mailOptions, function(err, info){

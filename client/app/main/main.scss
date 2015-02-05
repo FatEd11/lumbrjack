@@ -47,6 +47,8 @@
         font: 700 2.5em $heading-font;
         color: $fifth-green;
         margin: 2em 0 0.7em;
+        padding-bottom: 0.5em;
+        background: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
     }
     p {
         color: $primary-green;
@@ -55,5 +57,13 @@
     }
     .content {
         padding: 5em 1em;
+    }
+    .about-img {
+        padding-right: 0;
+        overflow: hidden;
+    }
+    img {
+        height: 100vh;
+        width: auto;
     }
 }

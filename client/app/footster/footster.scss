@@ -8,19 +8,26 @@ footer {
 	}
 }
 
+.contact-footer {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 .social-icons {
+	text-align: center;
 	ul {
 		-webkit-padding-start: 0;
 		list-style-type: none;
 	}
 	li {
 		text-align: center;
+		padding: 0 1em;
 	}
 	a {
-		color: #fff;
+		color: $fourth-green;
 		font-size: 2em;
 		&:hover {
-			color: $fourth-green
+			color: $first-green
 		}
 	}
 }

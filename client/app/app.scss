@@ -8,6 +8,8 @@ $fifth-green: #274f42;
 $logo-font: 'Vampiro One', cursive;
 $heading-font: 'Kreon', serif;
 $body-font: 'Fira Sans', sans-serif;
+$underline: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
+$overline: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) top/50% 1px no-repeat;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
@@ -48,6 +50,34 @@ p {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+.white-button {
+  border: 3px solid #fff;
+  border-radius: 0.6em;
+  padding: 0.3em 0.7em;
+  margin: 2em 0;
+  color: #fff;   
+  font-weight:300;
+  font-family: $heading-font;
+  transition: all 1s ease-in;
+  cursor: pointer;
+  &:hover {
+      background: #fff;
+      color: $fifth-green;
+      text-decoration: none;
+      transition: all 1s ease-in;
+  }
+}
+
+.green-button {
+ @extend .white-button;
+ border: 3px solid $primary-green;
+ color: $primary-green;
+ &:hover {
+  background: $primary-green;
+  color: #fff;
+ }
 }
 
 // Component styles are injected through grunt

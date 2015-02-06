@@ -1,69 +1,80 @@
 .content {
     margin: 0 auto;
-    padding: 5em 0;
+    padding: 4em 1em;
     text-align: center;
-}
-.hero {
-    height: 100vh;
-    min-height: 600px;
-    background: url(/assets/images/pattern2.png) repeat;
-    font: 300 2em $heading-font;
-    color: #fff;
-    h1 {
-        font: 2em $logo-font;
-        border: 12px solid $primary-green;
-        padding: 0.5em 0;
-        margin: 0 auto;
-        width: 350px;
-        border-radius: 60%;
-        text-shadow: 2px 4px 0 #000;
-        box-shadow: 0 5px 0 $fifth-green, inset 0 5px $fifth-green;
-    }
-    h2 {
-        margin: 2em 1em;   
-        font-weight:300;
-    }
-    a {
-        border: 3px solid #fff;
-        border-radius: 0.6em;
-        padding: 0.3em 0.7em;
-        margin: 2em 0;
-        color: inherit;   
-        font-weight:300;
-        transition: all 1s ease-in;
-        cursor: pointer;
-        &:hover {
-            background: #fff;
-            color: $fifth-green;
-            text-decoration: none;
-            transition: all 1s ease-in;
-        }
-    }
-}
-.about {
-    height: 100vh;
-    min-height: 600px;
     h1 {
         font: 700 2.5em $heading-font;
         color: $fifth-green;
-        margin: 2em 0 0.7em;
+        margin: 1.5em 0 0.7em;
         padding-bottom: 0.5em;
-        background: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
+        background: $underline
     }
     p {
         color: $primary-green;
         font-size: 1.3em;
         font-weight: 300;
     }
-    .content {
-        padding: 5em 1em;
+    blockquote {
+        border-left: none;
+        background: $overline;
+        margin-bottom: 2em 0;
+        p {
+            font-weight: 700;
+        }
+        cite {
+            font-size: 0.7em;            
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background: url(/assets/images/pattern2.png) repeat;
+    font: 300 2em $heading-font;
+    color: #fff;
+    .hero-content {
+        margin: 0 auto;
+        padding: 5em 0;
+        text-align: center;
+        h1 {
+            font: 2em $logo-font;
+            border: 12px solid $primary-green;
+            padding: 0.5em 0;
+            margin: 0 auto;
+            width: 350px;
+            border-radius: 60%;
+            text-shadow: 2px 4px 0 #000;
+            box-shadow: 0 5px 0 $fifth-green, inset 0 5px $fifth-green;
+        }
+        h2 {
+            margin: 2em 1em;   
+            font-weight:300;
+        }
+    }
+}
+.about {
+    min-height: 100vh;
+    @media screen and (max-height: 600px) {
+        min-height: 600px;
+    }
+    img {
+        height: 100vh;
+        width: auto;
     }
     .about-img {
         padding-right: 0;
         overflow: hidden;
     }
-    img {
-        height: 100vh;
-        width: auto;
+}
+
+.portfolio {
+    @extend .about;
+    background: url(/assets/images/aerowood2.png);
+    a {
+        font-size: 1.5em;
+    }
+    p {
+        color: $fifth-green;
     }
 }

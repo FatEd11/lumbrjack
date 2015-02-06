@@ -4,17 +4,19 @@
   height: 50vh;
   max-height: 300px;
   text-align: center;
-  color: $primary-green;
+  color: $fifth-green;
   display: table;
   width: 100%;
   h1 {
-    font-weight: 300;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+    background: $underline
   }
   p {
     font-size: 1.3em;
     color: $first-green;
   }
-  .portfolio-content {
+  .header-content {
     display: table-cell;
     vertical-align: middle;
   }
@@ -49,7 +51,19 @@
 
 /****** Project views *******/
 
-.project-container {
-  position: relative;
-  top: 3em;
+.portfolio-container {
+  padding-top: 3em;
+}
+
+.portfolio-copy {
+  max-width: 650px;
+  margin: 0 auto;
+  color: $primary-green;
+  p {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+  img {
+    max-width: 100%
+  }
 }

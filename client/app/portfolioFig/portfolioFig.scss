@@ -54,12 +54,12 @@ figure.cs-style-3 {
 }
 
 .no-touch figure.cs-style-3:hover img,
-figure.cs-style-3.cs-hover img {
+.touch figure.cs-style-3.cs-hover img {
     transform: translateY(-50px);
 }
 
 .no-touch figure.cs-style-3:hover figcaption,
-figure.cs-style-3.cs-hover figcaption {
+.touch figure.cs-style-3.cs-hover figcaption {
     opacity: 1;
     transform: translateY(0px);
     transition: transform 0.4s, opacity 0.1s;

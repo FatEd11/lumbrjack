@@ -24,12 +24,20 @@ angular.module('lumbrjackApp')
           }, 5000);
         };
 
+        scope.messageFailed = false;
+        var messageFail = function (){
+          scope.messageFailed = true;
+          $timeout(function(){
+            scope.messageFailed=false;
+          }, 5000);
+        };
+
         var l = Ladda.create(document.querySelector('.contact-btn'));
   
   	  	var postMail = function(){
           l.start();
-  	       sendMail.post(emailData)
-           .then(function(){
+          sendMail.post(emailData)
+          .then(function(){ // Success handler - resets everything.
             scope.emailData = {
               from: '',
               name: '',
@@ -39,6 +47,9 @@ angular.module('lumbrjackApp')
             l.stop();
             scope.contactForm.$setPristine();
             sentMessage();
+          }, function(){ // Error handler
+            l.stop();
+            messageFail();
           });
   	    };
   

@@ -28,6 +28,7 @@
       <div ng-if="contactForm.message.$error.required">You haven't told me how can I help</div>
     </div>
     <div class="sent-message" ng-class="{sent: messageSent}">Message recieved!</div>
+    <div class="fail-message" ng-class="{fail: messageFailed}">Hmmm. Something went wrong...Please try again.</div>
   </div>
 
   <button ng-class="{valid:contactForm.$valid}" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Send</span></button>

@@ -156,11 +156,13 @@ textarea.input__field--haruki {
   color: #fff;
 }
 
-.sent-message {
+.sent-message,
+.fail-message {
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.sent-message.sent {
+.sent-message.sent,
+.fail-message.fail {
   opacity: 1
 }

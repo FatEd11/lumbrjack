@@ -1,8 +1,8 @@
 .portfolio-head {
   background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,265,1) 100%), url(/assets/images/aerowood2.png) repeat;
   padding: 1em 0.5em;
-  height: 50vh;
-  max-height: 300px;
+  height: 40vh;
+  max-height: 250px;
   text-align: center;
   color: $fifth-green;
   display: table;
@@ -11,6 +11,10 @@
     font-weight: 700;
     padding-bottom: 0.5em;
     background: $underline
+  }
+  img {
+    padding-bottom: 0.5em;
+    background: $underline;
   }
   p {
     font-size: 1.3em;
@@ -53,15 +57,31 @@
 
 .portfolio-container {
   padding-top: 3em;
+  [mobile-device], [browser-image] {
+    margin-bottom: 2em;
+  }
+  .marvel-device {
+    display: block;
+    margin: 0 auto;
+    &.iphone6 {
+      width: 340px;
+      height: 550px;
+    }
+  }
 }
 
 .portfolio-copy {
   max-width: 650px;
   margin: 0 auto;
   color: $primary-green;
-  p {
+  p, li {
     font-size: 1.1em;
     line-height: 1.5;
+  }
+  h2 {
+    color: $fifth-green;
+    font-weight: 700;
+    font-size: 2.5em;
   }
   img {
     max-width: 100%

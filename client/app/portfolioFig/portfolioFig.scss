@@ -27,7 +27,12 @@ figure.portfolio-figure {
       border-radius: 2px;
       display: inline-block;
       background: $primary-green;
-      color: #fff
+      color: #fff;
+      transition: background 0.5s ease;
+      &:hover {
+        text-decoration: none;
+        background: $fourth-green;
+      }
     }
   }
 }

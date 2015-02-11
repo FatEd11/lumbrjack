@@ -9,6 +9,7 @@ $logo-font: 'Vampiro One', cursive;
 $heading-font: 'Kreon', serif;
 $body-font: 'Fira Sans', sans-serif;
 $underline: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
+$underlight: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)) bottom/80% 1px no-repeat;
 $overline: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) top/50% 1px no-repeat;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
@@ -58,7 +59,7 @@ p {
   border-radius: 0.6em;
   padding: 0.3em 0.7em;
   margin: 2em 0;
-  color: #fff;   
+  color: #fff;
   font-weight:300;
   font-family: $heading-font;
   transition: all 1s ease-in;

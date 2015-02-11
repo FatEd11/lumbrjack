@@ -26,6 +26,10 @@ angular.module('lumbrjackApp')
               {
                 'title': 'About',
                 'link': 'about'
+              },
+              {
+                'title': 'Skills',
+                'link': 'skills'
               }
             ]
       	  },
@@ -42,7 +46,7 @@ angular.module('lumbrjackApp')
         };
 
         scope.hasSubmenu = hasSubmenu;
-        
+
 
         // Open and close menu
 
@@ -64,7 +68,7 @@ angular.module('lumbrjackApp')
 
         scope.isFilled = false;
 
-        $rootScope.$on('$stateChangeSuccess', 
+        $rootScope.$on('$stateChangeSuccess',
           function(ev, to, toP, from, fromP){
             $state.current = to;
             if (to.name === 'main') {

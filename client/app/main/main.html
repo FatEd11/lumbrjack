@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <div class="content init" scroll-in-class="animated fadeInLeftBig" scroll-in-remove="init" scroll-in-offset="400">
+        <div class="content">
           <h1>About</h1>
           <p>London based product manager, javascript developer and budding web designer.</p>
           <p>I thrive on early stage products: talking to users, defining the problem, running experiments, building a solution.</p>
@@ -18,13 +18,46 @@
         </div>
       </div>
       <div class="hidden-xs hidden-sm col-md-6 about-img">
-        <img class="init" src="/assets/images/tools.jpg" alt="Some of my tools" scroll-in-class="animated fadeInRightBig" scroll-in-remove="init" scroll-in-offset="400">
+        <div class="image-contain"></div>
       </div>
     </div>
   </div>
-  <div class="skills">
-     <!-- To be added -->
+</div>
+<div class="skills">
+  <span id="skills"></span>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="hidden-xs hidden-sm col-md-6 skills-img">
+        <div class="image-contain"></div>
+      </div>
+      <div class="col-xs-12 col-md-6 pull-right">
+        <div class="content">
+          <h1>Skills</h1>
+          <div class="skill" hm-tap="main.tapHover($event)">
+            <img src="/assets/images/icons/presentation.png" alt="">
+            <h2>Product</h2>
+            <p>Experienced product manager. Delivers the right product.</p>
+          </div>
+          <div class="skill" hm-tap="main.tapHover($event)">
+            <img src="/assets/images/icons/code.png" alt="">
+            <h2>Development</h2>
+            <p>Front to back JavaScript developer. Angular and Node evangelist.</p>
+          </div>
+          <div class="skill" hm-tap="main.tapHover($event)">
+            <img src="/assets/images/icons/rulers.png" alt="">
+            <h2>Design</h2>
+            <p>Waxes lyrical about the merits of thoughtful typography.</p>
+          </div>
+          <div class="skill" hm-tap="main.tapHover($event)">
+            <img src="/assets/images/icons/compose.png" alt="">
+            <h2>Content</h2>
+            <p>Blog writing, copy writing, marketing collateral - name it.</p>
+          </div>
+        </div>
+      </div>
+    </row>
   </div>
+</div>
 </div>
 <div class="portfolio">
   <span id="portfolio"></span>
@@ -34,11 +67,6 @@
         <div class="content">
           <h1>Portfolio</h1>
           <p>I've built products for clients from <strong>top 100</strong> law firms and <strong>FTSE 150</strong> FMCG companies, to first round startups.</p>
-          <p>In each I have abided by the mantra:</p>
-          <blockquote>
-            <p>Don't sell what you can make, make what you can sell.</p>
-            <cite>A Croll &amp; B Yoskovitz Lean Analytics</cite>
-          </blockquote>
           <a class="green-button" ui-sref="projects">See my work</a>
         </div>
       </div>

@@ -2,11 +2,9 @@
     margin: 0 auto;
     padding: 4em 1em;
     text-align: center;
+    overflow-x: hidden;
     opacity: 1;
     transition: opacity 0.5s ease-in;
-    &.init {
-      opacity: 0;
-    }
     h1 {
         font: 700 2.5em $heading-font;
         color: $fifth-green;
@@ -30,6 +28,10 @@
             font-size: 0.7em;
         }
     }
+}
+
+.no-touch .content.init {
+  opacity: 0;
 }
 
 .hero {
@@ -60,27 +62,106 @@
 }
 .about {
     min-height: 100vh;
+    position: relative;
     @media screen and (max-height: 600px) {
         min-height: 600px;
     }
-    img {
-        height: 100vh;
-        width: auto;
-        opacity: 1;
-        transition: opacity 0.5s ease-in;
-        &.init {
-          opacity: 0;
-        }
-    }
-    .about-img {
-        padding-right: 0;
-        overflow: hidden;
-    }
 }
+
+.skills-img,
+.about-img {
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.image-contain {
+  height: 100%;
+}
+
+.about-img {
+  right: 0;
+  .image-contain {
+    background: url(/assets/images/path.jpg) right/cover no-repeat;
+  }
+}
+
+.skills-img {
+  .image-contain {
+    background: url(/assets/images/tools.jpg) left/cover no-repeat;
+  }
+}
+
+.skills {
+  @extend .about;
+  background: $primary-green;
+  h1 {
+    color: #fff;
+    background: $underlight;
+    margin-top: 1em;
+  }
+}
+
+.skill {
+  + .skill {
+    margin-top: 0.5em;
+  }
+  text-align: left;
+  img {
+    float: left;
+    width: 70px;
+    height: auto;
+    margin-right: 1em;
+  }
+  h2, p {
+    color: #fff
+  }
+  h2 {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+    font-weight: 300;
+  }
+  p {
+    opacity: 0;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    transition: opacity 0.3s ease-in-out;
+  }
+  transition: transform 0.3s ease-in-out;
+}
+
+.no-touch .skill {
+  &:hover {
+    transform: translate(10px, -20px) scale(1.1);
+    p {
+      opacity: 1;
+    }
+  }
+}
+.touch .skill {
+  &.skill-hover {
+    transform: translate(10px, -20px) scale(1.1);
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+.skill { // Clearfix
+  &::before, &::after {
+    content: ' ';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
 
 .portfolio {
     @extend .about;
-    background: url(/assets/images/aerowood2.png);
     a {
         font-size: 1.5em;
     }

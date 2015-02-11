@@ -2,6 +2,11 @@
     margin: 0 auto;
     padding: 4em 1em;
     text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    &.init {
+      opacity: 0;
+    }
     h1 {
         font: 700 2.5em $heading-font;
         color: $fifth-green;
@@ -22,7 +27,7 @@
             font-weight: 700;
         }
         cite {
-            font-size: 0.7em;            
+            font-size: 0.7em;
         }
     }
 }
@@ -48,7 +53,7 @@
             box-shadow: 0 5px 0 $fifth-green, inset 0 5px $fifth-green;
         }
         h2 {
-            margin: 2em 1em;   
+            margin: 2em 1em;
             font-weight:300;
         }
     }
@@ -61,6 +66,11 @@
     img {
         height: 100vh;
         width: auto;
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+        &.init {
+          opacity: 0;
+        }
     }
     .about-img {
         padding-right: 0;

@@ -10,6 +10,75 @@
     <title>lumbrjack | Hewing the web by hand</title>
     <meta name="description" content="Javascript development and product management by a true woodsman">
     <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+      [ng-cloak].loader {
+        display: block !important;  
+      }
+
+      [ng-cloak] {
+        display: none;
+      }
+
+      .loader {
+        width: 100%;
+        height: 100%;
+        position:fixed;
+        z-index: 100000;
+        background-color: #394042; 
+        text-align: center;
+        display: none;
+      }
+
+      .loader ul.spinner {
+        margin: 0 auto ;
+        width: 200px;
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+      }
+
+      .loader ul.spinner > li {
+        width: 15px;
+        height: 15px;
+        background-color: #f6f6f6;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        margin:0 5px;
+      }
+
+      .loader ul.spinner li.bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+
+      .loader ul.spinner li.bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+
+      @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0.0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+
+      @keyframes bouncedelay {
+        0%, 80%, 100% {
+          transform: scale(0.0);
+          -webkit-transform: scale(0.0);
+        } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+        }
+      }
+    </style>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
@@ -31,9 +100,14 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav navbar></nav>
-    <div ui-view autoscroll class="main-contain"></div>
-    <footer footster></footer>
+    <!-- Preloader -->
+    <div class="loader" ng-cloak><ul class="spinner"><li class="bounce1"></li><li class="bounce2"></li><li class="bounce3"></li><ul></div>
+    <!-- Preloader end -->
+
+    <nav navbar ng-cloak></nav>
+    <div ui-view autoscroll class="main-contain" ng-cloak></div>
+    <footer footster ng-cloak></footer>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

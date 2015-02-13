@@ -90,23 +90,18 @@
 
 .skills-img {
   .image-contain {
-    background: url(/assets/images/tools.jpg) left/cover no-repeat;
+    background: url(/assets/images/tools.jpg) center/cover no-repeat;
   }
 }
 
 .skills {
   @extend .about;
   background: $primary-green;
-  h1 {
-    color: #fff;
-    background: $underlight;
-    margin-top: 1em;
-  }
 }
 
 .skill {
   + .skill {
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
   text-align: left;
   img {
@@ -120,7 +115,7 @@
   }
   h2 {
     font-size: 2.5em;
-    margin: 0.2em 0;
+    margin: 0.2em 0 0.5em;
     font-weight: 300;
   }
   p {
@@ -134,7 +129,7 @@
 
 .no-touch .skill {
   &:hover {
-    transform: translate(10px, -20px) scale(1.1);
+    transform: translate(18px, -20px) scale(1.1);
     p {
       opacity: 1;
     }
@@ -142,7 +137,7 @@
 }
 .touch .skill {
   &.skill-hover {
-    transform: translate(10px, -20px) scale(1.1);
+    transform: translate(18px, -20px) scale(1.1);
     p {
       opacity: 1;
     }
@@ -162,10 +157,15 @@
 
 .portfolio {
     @extend .about;
+    background: url(/assets/images/felled.jpg) center/cover no-repeat;
     a {
         font-size: 1.5em;
     }
+    h1 {
+      background: $underlight;
+    }
     p {
-        color: $fifth-green;
+        color: #fff;
+        margin-bottom: 2em;
     }
 }

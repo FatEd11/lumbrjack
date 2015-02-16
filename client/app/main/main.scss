@@ -1,33 +1,33 @@
 .content {
-    margin: 0 auto;
-    padding: 4em 1em;
-    text-align: center;
-    overflow-x: hidden;
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
-    h1 {
-        font: 700 2.5em $heading-font;
-        color: $fifth-green;
-        margin: 1.5em 0 0.7em;
-        padding-bottom: 0.5em;
-        background: $underline
-    }
+  margin: 0 auto;
+  padding: 4em 1em;
+  text-align: center;
+  overflow-x: hidden;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  h1 {
+    font: 700 2.5em $heading-font;
+    color: $fifth-green;
+    margin: 1.5em 0 0.7em;
+    padding-bottom: 0.5em;
+    background: $underline
+  }
+  p {
+    color: $primary-green;
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+  blockquote {
+    border-left: none;
+    background: $overline;
+    margin-bottom: 2em 0;
     p {
-        color: $primary-green;
-        font-size: 1.3em;
-        font-weight: 300;
+        font-weight: 700;
     }
-    blockquote {
-        border-left: none;
-        background: $overline;
-        margin-bottom: 2em 0;
-        p {
-            font-weight: 700;
-        }
-        cite {
-            font-size: 0.7em;
-        }
+    cite {
+        font-size: 0.7em;
     }
+  }
 }
 
 .no-touch .content.init {
@@ -157,15 +157,43 @@
 
 .portfolio {
     @extend .about;
-    background: url(/assets/images/felled.jpg) center/cover no-repeat;
+    background: url(/assets/images/logpile.jpeg) center/cover no-repeat;
     a {
         font-size: 1.5em;
     }
     h1 {
       background: $underlight;
+      color: #fff;
     }
     p {
         color: #fff;
         margin-bottom: 2em;
     }
+    .content {
+      max-width: 700px;
+    }
+}
+
+.blog {
+  @extend .about;
+  .post p {
+    &::after {
+      content: '...';
+    }
+  }
+  .content .posts {
+    text-align: left;
+  }
+  .small {
+    font-size: 0.6em;
+    font-style: italic;
+    color: $first-green;
+  }
+  h2 {
+    margin-top: 2.5em;
+  }
+  .post-list {
+    list-style-type: none;
+    -webkit-padding-start: 0;  
+  }
 }

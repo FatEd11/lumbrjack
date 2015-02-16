@@ -65,7 +65,7 @@
       <div class="col-xs-12">
         <div class="content">
           <h1>Portfolio</h1>
-          <p>I've built products for clients from <strong>top 100</strong> law firms and <strong>FTSE 150</strong> FMCG companies, to first round startups.</p>
+          <p>I've built and tested products for clients from <strong>top 100</strong> law firms and <strong>FTSE 150</strong> FMCG companies, to first round startups.</p>
           <a class="white-button" ui-sref="projects">See my work</a>
         </div>
       </div>
@@ -73,5 +73,31 @@
   </div>
 </div>
 <div class="blog">
- <!-- To be added -->
+ <span id="blog"></span>
+ <div class="container-fluid">
+   <div class="row">
+     <div class="col-xs-12 col-md-6">
+       <div class="content">
+         <h1>Blog</h1>
+         <p>My perspectives on coding, product management, whisky and fire.</p>
+         <p>Built, given my JavaScript persuasions, on <a href="http://ghost.org">ghost.org</a>.</p>
+       </div>
+     </div>
+     <div class="col-xs-12 col-md-6">
+       <div class="content">
+        <h2>Recent posts:</h2>
+         <div class="posts">           
+           <ul class="post-list">
+             <li class="post" ng-repeat="post in main.posts | limitTo: 4">
+               <h3>{{post.title}}</h3>
+               <p>{{post.subtitle | limitTo: 50}}</p>
+             </li>
+           </ul>
+           <a href="http://blog.lumbrjack.com/" target="_blank">See all posts</a>
+           <p class="small">Ghost.org have not yet released a public API, so for now this list is woefully. static. Stay tuned.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>

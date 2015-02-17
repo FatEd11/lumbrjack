@@ -35,46 +35,46 @@
 }
 
 .hero {
-    height: 100vh;
-    min-height: 600px;
-    background: url(/assets/images/pattern2.png) repeat;
-    font: 300 2em $heading-font;
-    color: #fff;
-    .hero-content {
-        margin: 0 auto;
-        padding: 5em 0;
-        text-align: center;
-        h1 {
-            font: 2em $logo-font;
-            border: 12px solid $primary-green;
-            padding: 0.5em 0;
-            margin: 0 auto;
-            width: 350px;
-            border-radius: 60%;
-            text-shadow: 2px 4px 0 #000;
-            box-shadow: 0 5px 0 $fifth-green, inset 0 5px $fifth-green;
-        }
-        h2 {
-            margin: 2em 1em;
-            font-weight:300;
-        }
+  height: 100vh;
+  min-height: 600px;
+  background: url(/assets/images/pattern2.png) repeat;
+  font: 300 2em $heading-font;
+  color: #fff;
+  .hero-content {
+    margin: 0 auto;
+    padding: 5em 0;
+    text-align: center;
+    h1 {
+      font: 2em $logo-font;
+      border: 12px solid $primary-green;
+      padding: 0.5em 0;
+      margin: 0 auto;
+      width: 350px;
+      border-radius: 60%;
+      text-shadow: 2px 4px 0 #000;
+      box-shadow: 0 5px 0 $fifth-green, inset 0 5px $fifth-green;
     }
+    h2 {
+      margin: 2em 1em;
+      font-weight:300;
+    }
+  }
 }
 .about {
-    min-height: 100vh;
-    position: relative;
-    @media screen and (max-height: 600px) {
-        min-height: 600px;
-    }
+  min-height: 100vh;
+  position: relative;
+  @media screen and (max-height: 600px) {
+    min-height: 600px;
+  }
 }
 
 .skills-img,
 .about-img {
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 .image-contain {
@@ -177,9 +177,13 @@
 .blog {
   @extend .about;
   .post p {
+    font-size: 1.1em;
     &::after {
       content: '...';
     }
+  }
+  .post + .post {
+    margin-top: 0.5em;
   }
   .content .posts {
     text-align: left;
@@ -190,10 +194,18 @@
     color: $first-green;
   }
   h2 {
-    margin-top: 2.5em;
+    margin-top: 2.5em 0 1.5em;
+    color: $fifth-green;
   }
   .post-list {
     list-style-type: none;
     -webkit-padding-start: 0;  
+  }
+  h3 {
+    color: $fifth-green;
+    font-weight: 300;
+  }
+  a:hover {
+    color: $primary-green;
   }
 }

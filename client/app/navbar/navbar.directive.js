@@ -30,11 +30,19 @@ angular.module('lumbrjackApp')
               {
                 'title': 'Skills',
                 'link': 'skills'
+              },
+              {
+                'title': 'Work',
+                'link': 'portfolio'
+              },
+              {
+                'title':'Blog',
+                'link': 'blog'
               }
             ]
       	  },
           {
-            'title': 'Projects',
+            'title': 'Portfolio',
             'link': 'projects'
           }
         ];

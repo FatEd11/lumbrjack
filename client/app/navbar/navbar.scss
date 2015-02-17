@@ -34,9 +34,9 @@
 		text-decoration: underline;
 	}
 	li {
-		position: relative;
 		display: block;
 		margin-bottom: 0.5em;
+		text-align: center;
 		a {
 			display: block;
 			color: #fff;
@@ -45,7 +45,8 @@
 				color: $fourth-green;
 			}
 			&::before {
-				margin-right: 0.5em;
+				position: relative;
+				left: -1em;
 				content: url(/assets/images/axe-ico.png)
 			}
 		}
@@ -55,7 +56,6 @@
 .sub-menu {
 	font-weight: 300;
 	-webkit-padding-start: 0;
-	padding-left: 2em;
 	font-size: 0.6em;
 	li a {
 		&::before {

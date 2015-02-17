@@ -80,6 +80,7 @@
        <div class="content">
          <h1>Blog</h1>
          <p>My perspectives on coding, product management, whisky and fire.</p>
+         <p>Writing helps me discover my own assumptions. It's only then that I can start tseting those assumptions. Writing is a product managers most important tool.</p>
          <p>Built, given my JavaScript persuasions, on <a href="http://ghost.org">ghost.org</a>.</p>
        </div>
      </div>
@@ -88,13 +89,24 @@
         <h2>Recent posts:</h2>
          <div class="posts">           
            <ul class="post-list">
-             <li class="post" ng-repeat="post in main.posts | limitTo: 4">
+             <li class="post" ng-repeat="post in main.posts | offset: main.currentPage * main.itemsPerPage | limitTo: main.itemsPerPage">
                <h3>{{post.title}}</h3>
-               <p>{{post.subtitle | limitTo: 50}}</p>
+               <a ng-href="{{post.link}}"><p>{{post.subtitle | limitTo: 50}}</p></a>
              </li>
            </ul>
            <a href="http://blog.lumbrjack.com/" target="_blank">See all posts</a>
            <p class="small">Ghost.org have not yet released a public API, so for now this list is woefully. static. Stay tuned.</p>
+           <div class="pagination">
+             <ul>
+               <li ng-class="main.prevPageDisabled()">
+                 <a href ng-click="main.prevPage()">Prev</a>
+               </li>
+               <!-- <li ng-repeat="n in main.range()" ng-class="{active: n == main.currentPage}" ng-click="main.setPage(n)"><a href>{{n+1}}</a></li> -->
+               <li ng-class="main.nextPageDisabled()">
+                 <a href ng-click="main.nextPage()">Next</a>
+               </li>
+             </ul>
+           </div>
          </div>
        </div>
      </div>

@@ -95,7 +95,7 @@
 
              <li class="post" ng-repeat="post in main.posts | offset: main.currentPage * main.itemsPerPage | limitTo: main.itemsPerPage">
                <h3>{{post.title}}</h3>
-               <a ng-href="{{post.link}}"><p>{{post.subtitle | limitTo: 50}}</p></a>
+               <a ng-href="{{post.link}}"><p>{{post.subtitle | limitText: 49}}</p></a>
              </li>
 
            </ul>

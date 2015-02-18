@@ -17,6 +17,12 @@
     font-size: 1.3em;
     font-weight: 300;
   }
+  p + p {
+    margin-top: 0.75em;
+  }
+  .button {
+    padding-top: 1.5em
+  }
   blockquote {
     border-left: none;
     background: $overline;
@@ -185,7 +191,7 @@
   .post + .post {
     margin-top: 0.5em;
   }
-  .content .posts {
+  .content .post-list {
     text-align: left;
   }
   .small {
@@ -194,7 +200,7 @@
     color: $first-green;
   }
   h2 {
-    margin-top: 2.5em 0 1.5em;
+    margin: 2.5em 0 1.7em;
     color: $fifth-green;
   }
   .post-list {
@@ -205,7 +211,101 @@
     color: $fifth-green;
     font-weight: 300;
   }
-  a:hover {
+  a:not(.green-button):hover {
     color: $primary-green;
+  }
+  p ~ .green-button {
+    margin-bottom: 1.5em;
+  }
+}
+
+/* Blog pagination controls and arrows */
+
+$size: 25px;
+$thickness: 4px;
+$angle: 40deg;
+$angleHover: 30deg;
+$angleActive: 25deg;
+
+@mixin arrowTransform( $angle, $x: 0, $y: 0 ) {
+  i:first-child {
+    transform: translate( $x, $y ) rotate( $angle );
+  }
+
+  i:last-child {
+    transform: translate( $x, -$y ) rotate( -$angle );
+  }
+}
+
+.paginate-controls {
+  display: block;
+  width: 200px;
+  height: ($size * 2) + ($thickness * 2);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.paginate {
+  position: absolute;
+  margin: 0 20px;
+  width: $size + $thickness;
+  height: $size + $thickness;
+  cursor: pointer;
+  transform: translate3d(0,0,0);
+  top: 50%;
+  margin-top: -20px;
+  -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+  i {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: $size;
+    height: $thickness;
+    border-radius: $thickness/2;
+    background: $fifth-green;
+    transition: all .15s ease;
+  }
+  &.left {
+    right: 50%;
+    i {
+      transform-origin: (0% 50%);
+    }
+    @include arrowTransform($angle, 0, -1px);
+    &:hover {
+      @include arrowTransform($angleHover, 0, -1px);
+    }
+    &:active {
+      @include arrowTransform($angleActive, 0, -1px);
+    }
+    &.disabled {
+      @include arrowTransform(0deg, -5px, 0);
+      &:hover {
+        @include arrowTransform(0deg, -5px, 0);
+      }
+    }
+  }
+  &.right {
+    left: 50%;
+    i {
+      transform-origin: (100% 50%);
+    }
+    @include arrowTransform($angle, 0, 1px);
+    &:hover {
+      @include arrowTransform($angleHover, 0, 1px);
+    }
+    &:active {
+      @include arrowTransform($angleActive, 0, 1px);
+    }
+    &.disabled {
+      @include arrowTransform(0deg, 5px, 0);
+      &:hover {
+        @include arrowTransform(0deg, 5px, 0);
+      }
+    }
+  }
+  &.disabled {
+    opacity: 0.3;
+    cursor: default;
   }
 }

@@ -62,13 +62,13 @@ p {
   color: #fff;
   font-weight:300;
   font-family: $heading-font;
-  transition: all 1s ease-in;
+  transition: all .3s ease-in;
   cursor: pointer;
   &:hover {
       background: #fff;
       color: $fifth-green;
       text-decoration: none;
-      transition: all 1s ease-in;
+      transition: all .3s ease-in;
   }
 }
 

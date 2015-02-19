@@ -143,6 +143,11 @@ textarea.input__field--haruki {
   }
 }
 
+.contact-btn[disabled] {
+  opacity: 0;
+  cursor: default;
+}
+
 .contact-btn.valid {
   opacity: 1;
 }
@@ -154,6 +159,7 @@ textarea.input__field--haruki {
   height: 1em;
   text-align: center;
   color: #fff;
+  cursor: default;
 }
 
 .sent-message,

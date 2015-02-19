@@ -31,3 +31,58 @@ footer {
 		}
 	}
 }
+
+.footer-copy {
+	max-width: 450px;
+	margin: 0 auto;
+	h1 {
+		font-family: $logo-font;
+		color: #fff;
+	  text-shadow: 2px 2px 0 #000;
+	  text-align: center;
+	}
+	p {
+		color: #fff;
+		font-size: 1.2em;
+		margin: 1.2em 0 1em;
+	}
+	img {
+		max-width: 70%;
+		opacity: 0.3;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.footer-nav {
+	ul {
+		list-style-type: none;
+		font-family: $heading-font;
+		-webkit-padding-start: 0;
+		font-size: 1.2em;
+	}
+	li {
+		border-top: 1px dashed #fff;
+	}
+	li + li {
+		margin-top: 0.5em;
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.colophon {
+	max-width: 90%;
+	margin: 0 auto;
+	color: #fff;
+	background: $overlight;
+	padding-top: 1em;
+	p {
+		max-width: 90%;
+		margin: 0 auto
+	}
+	span {
+		float: right;
+	}
+}

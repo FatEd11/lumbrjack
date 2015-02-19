@@ -11,6 +11,7 @@ $body-font: 'Fira Sans', sans-serif;
 $underline: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
 $underlight: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)) bottom/80% 1px no-repeat;
 $overline: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) top/50% 1px no-repeat;
+$overlight: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)) top/100% 1px no-repeat;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';

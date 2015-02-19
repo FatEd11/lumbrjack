@@ -31,6 +31,6 @@
     <div class="fail-message" ng-class="{fail: messageFailed}">Hmmm. Something went wrong...Please try again.</div>
   </div>
 
-  <button ng-class="{valid:contactForm.$valid}" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Send</span></button>
+  <button ng-class="{valid:contactForm.$valid}" ng-disabled="!contactForm.$valid" type="submit" class="btn ladda-button contact-btn" data-style="expand-right"><span class="ladda-label">Send</span></button>
   
 </form>

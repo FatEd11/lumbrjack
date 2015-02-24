@@ -102,7 +102,7 @@
 
 .skills {
   @extend .about;
-  background: $primary-green;
+  // background: $primary-green;
 }
 
 .skill {
@@ -163,7 +163,7 @@
 
 .portfolio {
     @extend .about;
-    background: url(/assets/images/logpile.jpeg) center/cover no-repeat;
+    //background: url(/assets/images/logpile.jpeg) center/cover no-repeat;
     a {
         font-size: 1.5em;
     }

@@ -18,7 +18,7 @@
   }
   p {
     font-size: 1.3em;
-    color: $first-green;
+    color: $second-green;
   }
   .header-content {
     display: table-cell;
@@ -34,23 +34,23 @@
 }
 
 @media screen and (max-width: 768px) {
-    .portfolio-grid .portfolio-figure {
-        max-width: 100%;
-    }
+  .portfolio-grid .portfolio-figure {
+    max-width: 100%;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
-    .portfolio-grid .portfolio-figure {
-        max-width: 50%;
-        margin: 0 0 -0.37em -0.3em;
-    }
+  .portfolio-grid .portfolio-figure {
+    max-width: 50%;
+    margin: 0 0 -0.37em -0.3em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .portfolio-grid .portfolio-figure {
-        max-width: 33.3333%;
-        margin: 0 0 -0.37em -0.3em;
-    }
+  .portfolio-grid .portfolio-figure {
+    max-width: 33.3333%;
+    margin: 0 0 -0.37em -0.3em;
+  }
 }
 
 /****** Project views *******/
@@ -75,15 +75,43 @@
   margin: 0 auto;
   color: $primary-green;
   p, li {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.5;
+    margin: 0;
+  }
+  p + * {
+    margin-top: 1em; 
   }
   h2 {
     color: $fifth-green;
     font-weight: 700;
     font-size: 2.5em;
+    text-align: center;
+    background: $underline;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
   }
   img {
-    max-width: 100%
+    max-width: 100%;
   }
+}
+
+.key-stats {
+  color: $fifth-green;
+  img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  h5 {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .table {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+}
+
+.portfolio-head.stl {
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,1) 95%), url(/assets/images/projects/stl/stl-header.png) fixed top no-repeat;
 }

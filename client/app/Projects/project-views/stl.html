@@ -1,7 +1,5 @@
 <div class="portfolio-container">
   <header class="portfolio-head stl">
-    <div class="header-content">
-    </div>
   </header>
   <div class="container-fluid">
     <div class="row">
@@ -29,7 +27,10 @@
     </div>
     <div class="col-xs-12 col-md-8">
       <div class="portfolio-copy">
-        <p>Simplify the Law <strong>(STL)</strong> is a legal services startup now owned by the Simplify Group. STL is a platform that provides both automated legal documents and maintained legal guidance. I am instrumental in the development and design of STL's digital products. I was also a small shareholder.</p>
+        <p>Simplify the Law <strong>(STL)</strong> is a legal services startup now owned by the Simplify Group. STL is a platform that provides both automated legal documents and maintained legal guidance.</p>
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AAu4xUiqMIY?controls=0&autoplay=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
         <p>I focus on talking to our users. I listen to the problems they are experiencing. Some are within our existing platform. Others are new problems which we have not yet tried to solve. We then, as a company, work out which problems solving makes financial sense.</p>
         <p>I devise the experiments to solve these problems, the metrics to measure their success, and design the solutions. This is why I love my job: lean product management makes sense to me.</p>
         <img src="/assets/images/lean-loop.png" alt="Build, Measure, Learn">
@@ -41,16 +42,6 @@
           <li><b>Illegibility</b>. Given that the website is content focused, users found the typography difficult to read. And it was worse on mobile devices.</li>
           <li><strong>Lack of obvious support</strong>. Our users felt that we had no clear presence on our own site. Users lacked confidence in the guidance we offered, as we were not available to back it up.</li>
         </ol>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <div browser-image browser-img="/projects/stl/stl2.png" browser-alt="Strong negative space"></div>
-        </div> 
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <div browser-image browser-img="/projects/stl/stl1.png" browser-alt="Strong negative space"></div>
-        </div>
-      </div>
-      <div class="portfolio-copy">
         <p>So we began an iterative process with them of:</p>
         <ol>
           <li>creating an initial design, based on our own <strong>hypotheses</strong></li>
@@ -58,16 +49,6 @@
           <li><strong>refining</strong> the design.</li>
         </ol>
         <p>We arrived at a design that made strong use of negative space. We employed a strong, contrasting palette to emphasise actions - including support options. We reworked our typography so it was legible at all display sizes. Additionally we made the layout responsive to changing screen size. </p>
-      </div>
-      <div class="row hidden-xs hidden-sm">    
-        <div class="col-xs-12 col-md-6">
-          <div mobile-device mobile-image="/projects/stl/stl3.png" mobile-alt="Legible across devices" colour="silver"></div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <div mobile-device mobile-image="/projects/stl/stl4.png" mobile-alt="Legible across devices" colour="gold"></div>
-        </div>
-      </div>
-      <div class="portfolio-copy">
         <h2>The result:</h2>
         <ul>
           <li><strong></strong>Significant upticks in user activation through registration.</li>
@@ -77,15 +58,29 @@
       </div>
     </div>
     <div class="hidden-xs hidden-sm col-md-2">
-      <aside>
-        
+      <aside class="extras">
+        <h5>Whitelabel</h5>
+        <p>We also packaged our platform up as a whitelabel product. Here are some of the whitelabel sites we built.</p>
+        <a ui-sref="stl.fjg">MyFJG</a>
+        <a ui-sref="stl.rc">Right Call</a>
       </aside>
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div browser-image browser-img="/projects/stl/stl2.png" browser-alt="Strong negative space"></div>
+    </div> 
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div browser-image browser-img="/projects/stl/stl1.png" browser-alt="Strong negative space"></div>
+    </div>
   </div>
-  <a ui-sref="stl.fjg">FJG</a>
-  <a ui-sref="stl.rc">RC</a>
-  <a ui-sref="^">Hide</a>
-  <hr>
-  <div ui-view></div>
+  <div class="row">    
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+      <div mobile-device mobile-image="/projects/stl/stl3.png" mobile-alt="Legible across devices" colour="silver"></div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div mobile-device mobile-image="/projects/stl/stl4.png" mobile-alt="Legible across devices" colour="gold"></div>
+    </div>
+  </div>
+  </div>
 </div>

@@ -14,10 +14,24 @@ angular.module('lumbrjackApp')
         controller: 'ProjectsCtrl as projects'
       })
       .state('stl.fjg', {
-        templateUrl: 'app/projects/project-views/fjg.html'
+        onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal){
+          $modal.open({
+            size: 'lg',
+            templateUrl: 'app/projects/project-views/fjg.html',
+          }).result.finally(function () {
+            $state.go('^');
+          });
+        }]
       })
       .state('stl.rc', {
-        templateUrl: 'app/projects/project-views/rc.html'
+        onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal){
+          $modal.open({
+            size: 'lg',
+            templateUrl: 'app/projects/project-views/rc.html',
+          }).result.finally(function () {
+            $state.go('^');
+          });
+        }]
       })
       .state('fsc', {
       	url: '/frith-street',

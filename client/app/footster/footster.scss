@@ -1,10 +1,10 @@
 footer {
-	background: /*$fifth-green*/ url(/assets/images/background.png) bottom/cover no-repeat;
-	padding: 1em 0 2em;
+	background: linear-gradient(0deg, rgba(255,255,255,0) 80%, rgba(255,255,255,1) ), url(/assets/images/background.png) bottom/cover no-repeat;
+	padding: 1em 0 1em;
 	h2 {
 		font-family: $heading-font;
 		color: #fff;
-		text-align: center
+		text-align: center;
 	}
 }
 
@@ -18,6 +18,7 @@ footer {
 	ul {
 		-webkit-padding-start: 0;
 		list-style-type: none;
+		margin-bottom: 0;
 	}
 	li {
 		text-align: center;
@@ -27,7 +28,7 @@ footer {
 		color: $fourth-green;
 		font-size: 2em;
 		&:hover {
-			color: $first-green
+			color: $first-green;
 		}
 	}
 }

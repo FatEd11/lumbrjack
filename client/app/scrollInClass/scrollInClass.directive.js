@@ -26,7 +26,7 @@ angular.module('lumbrjackApp')
             };
 
         ngwindow.on('load', function(){
-          ngwindow.on('scroll', onScrollHandler)
+          ngwindow.on('scroll', onScrollHandler);
         });
       }
     };

@@ -44,10 +44,6 @@ angular.module('lumbrjackApp')
           {
             'title': 'Portfolio',
             'link': 'projects'
-          },
-          {
-            'title': 'Contact',
-            'link': 'contact'
           }
         ];
 

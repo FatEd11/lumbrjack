@@ -1,3 +1,5 @@
+/*
+
 figure.portfolio-figure {
   display: inline-block;
   margin: 0;
@@ -13,7 +15,7 @@ figure.portfolio-figure {
     top: 0;
     left: 0;
     padding: 20px;
-    background: $fifth-green;
+    background: linear-gradient(180deg, $fifth-green, white);
     color: #fff;
     h3 {
       margin: 0;
@@ -22,17 +24,7 @@ figure.portfolio-figure {
       font-family: $heading-font;
     }
     a {
-      text-align: center;
-      padding: 5px 10px;
-      border-radius: 2px;
-      display: inline-block;
-      background: $primary-green;
-      color: #fff;
-      transition: background 0.5s ease;
-      &:hover {
-        text-decoration: none;
-        background: $fourth-green;
-      }
+      margin: 0;
     }
   }
 }
@@ -68,4 +60,55 @@ figure.cs-style-3 {
     opacity: 1;
     transform: translateY(0px);
     transition: transform 0.4s, opacity 0.1s;
+}
+
+*/
+
+figure.portfolio-figure {
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  max-width: 500px;
+  img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    text-align: center;
+    h3 {
+      margin: 0;
+      padding: 0 0 0.5em;
+      font-family: $heading-font;
+      background: $underlight;
+    }
+    span {
+      display: block;
+      margin: 0.5em 0 1em;
+    }
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+  }
+}
+
+.no-touch figure.portfolio-figure:hover img,
+.touch figure.portfolio-figure.cs-hover img {
+    transform: scale(1.1);
+}
+
+.no-touch figure.portfolio-figure:hover figcaption,
+.touch figure.portfolio-figure.cs-hover figcaption {
+    opacity: 1;
+    transform: scale(1);
 }

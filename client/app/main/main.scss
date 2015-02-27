@@ -292,9 +292,9 @@ $angleActive: 25deg;
       @include arrowTransform($angleActive, 0, -1px);
     }
     &.disabled {
-      @include arrowTransform(0deg, -5px, 0);
+      @include arrowTransform(0deg, 0, 0);
       &:hover {
-        @include arrowTransform(0deg, -5px, 0);
+        @include arrowTransform(0deg, 0, 0);
       }
     }
   }
@@ -311,9 +311,9 @@ $angleActive: 25deg;
       @include arrowTransform($angleActive, 0, 1px);
     }
     &.disabled {
-      @include arrowTransform(0deg, 5px, 0);
+      @include arrowTransform(0deg, 0, 0);
       &:hover {
-        @include arrowTransform(0deg, 5px, 0);
+        @include arrowTransform(0deg, 0, 0);
       }
     }
   }

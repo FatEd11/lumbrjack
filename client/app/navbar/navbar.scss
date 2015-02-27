@@ -17,9 +17,9 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: url(/assets/images/pattern2.png) repeat;
-	border-bottom: 2px solid black;
+	background:rgba(0,0,0,1);
 	opacity: 0;
+	z-index: -1;
 	transition: opacity 0.5s ease-in;
 }
 
@@ -172,7 +172,7 @@
 
 .top-nav.fill {
 	.nav-fill {
-		opacity: 1;
+		opacity: 0.5;
 	}
 	.navbar-brand {
 		opacity: 1;
@@ -182,7 +182,7 @@
 .top-nav.open {
 	background: rgba(0,0,0,0.7);
 	height: 100%;
-	.nav-fill {
-		display: none
+	.nav-fill, .navbar-brand {
+		opacity: 0;
 	}
 }

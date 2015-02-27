@@ -266,7 +266,7 @@ module.exports = function (grunt) {
         // This is so we update image references in our ng-templates
         patterns: {
           js: [
-            [/(assets\/images\/.**?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+            [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
           ]
         }
       }

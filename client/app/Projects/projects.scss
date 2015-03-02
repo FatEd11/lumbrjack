@@ -1,5 +1,5 @@
 .portfolio-head {
-  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,265,1) 100%), url(/assets/images/pattern2.png) repeat fixed;
+  background: url(/assets/images/pattern2.png) repeat fixed;
   padding: 2em 0.5em;
   height: 40vh;
   max-height: 250px;
@@ -10,7 +10,7 @@
   h1 {
     font-weight: 700;
     padding-bottom: 0.5em;
-    background: $underline
+    background: $underlight;
   }
   img {
     padding-bottom: 0.5em;
@@ -27,36 +27,32 @@
 
 .portfolio-grid {
   text-align: center;
-  padding: 2em 0;
-  .portfolio-figure {
+  padding: 100px 1em 100px 1em;
+  list-style: none;
+  max-width: 1300px;
+  margin: 0 auto;
+  li {
+    display: inline-block;
+    width: 440px;
+    margin: 0;
     text-align: left;
+    position: relative;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .portfolio-grid .portfolio-figure {
-    max-width: 100%;
+@media screen and (max-width: 31.5em) {
+  .portfolio-grid {
+    padding: 2em 0;
   }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1199px) {
-  .portfolio-grid .portfolio-figure {
-    max-width: 50%;
-    margin: 0 0 -0.37em -0.3em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio-grid .portfolio-figure {
-    max-width: 33.3333%;
-    margin: 0 0 -0.37em -0.3em;
+  .portfolio-grid li {
+    width: 100%;
+    min-width: 300px;
   }
 }
 
 /****** Project views *******/
 
 .portfolio-container {
-  padding-top: 3em;
   [mobile-device], [browser-image] {
     margin-bottom: 2em;
   }
@@ -67,6 +63,9 @@
       width: 340px;
       height: 550px;
     }
+  }
+  .article {
+    margin-top: 2em;
   }
 }
 
@@ -134,7 +133,7 @@
 }
 
 .portfolio-head.stl {
-  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,1) 95%), url(/assets/images/projects/stl/stl-header.png) fixed top no-repeat;
+  background:url(/assets/images/projects/stl/stl-header.png) top/contain fixed no-repeat;
 }
 
 /***** Responsive video embed *******/

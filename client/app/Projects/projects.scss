@@ -78,6 +78,17 @@
     line-height: 1.5;
     margin: 0;
   }
+  p:first-child::first-letter {
+    font-size: 2.7em;
+    font-weight: 700;
+    font-family: $heading-font;
+    float: left;
+    margin: 0 0.1em -0.25em 0;
+    padding: 0 0.1em 0;
+    line-height: 1;
+    color: $fifth-green;
+    border: 2px dashed $first-green;
+  }
   p + * {
     margin-top: 1em; 
   }
@@ -132,9 +143,21 @@
   }
 }
 
+/********* State specific styles *********/
+
 .portfolio-head.stl {
   background:url(/assets/images/projects/stl/stl-header.png) top/contain fixed no-repeat;
 }
+
+.portfolio-head.fsc {
+  background:url(/assets/images/projects/fsc/fsc3.png) top/contain fixed no-repeat;
+}
+
+.portfolio-head.ops {
+  background:url(/assets/images/projects/ops/ops-header.png) top center fixed no-repeat;
+  background-color: #f8f8f8;
+}
+
 
 /***** Responsive video embed *******/
 

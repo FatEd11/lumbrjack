@@ -36,6 +36,14 @@ angular.module('lumbrjackApp')
       .state('fsc', {
       	url: '/frith-street',
       	templateUrl: 'app/projects/project-views/fsc.html'
+      })
+      .state('ops', {
+        url: '/open-source',
+        templateUrl: 'app/projects/project-views/ops.html'
+      })
+      .state('lbj', {
+        url: '/lumbrjack-app',
+        templateUrl: 'app/projects/project-views/lbj.html'
       });
   });
 
